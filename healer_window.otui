@@ -1,0 +1,298 @@
+ManaRune < Panel
+  image-source: /images/ui/panel_flat
+  image-border: 6
+  padding: 3
+  size: 190 70
+
+  Label
+    id: label
+    text: Configurar ManaRune:
+    anchors.left: parent.left
+    anchors.top: parent.top
+    margin-left: 28
+    color: #c559ff
+    text-align: center
+
+  HorizontalSeparator
+    id: separatorOne
+    anchors.top: label.bottom
+    anchors.right: parent.right
+    anchors.left: parent.left
+    margin-top: 5
+    margin-bottom: 10
+
+  BotItem
+    id: item
+    anchors.left: parent.left
+    anchors.top: separatorOne.bottom
+    margin-top: 5
+
+  BotSwitch
+    id: switch
+    anchors.top: separatorOne.bottom
+    anchors.left: item.right
+    text-align: center
+    margin-left: 5
+    margin-top: 5
+    width: 142
+
+  HorizontalScrollBar
+    id: scroll
+    anchors.left: item.right
+    anchors.top: switch.bottom
+    anchors.right: switch.right
+    margin-left: 5
+    margin-top: 5
+    minimum: 1
+    maximum: 100
+    step: 1
+
+HealRune < Panel
+  image-source: /images/ui/panel_flat
+  image-border: 6
+  padding: 3
+  size: 190 70
+
+  Label
+    id: label
+    text: Configurar HealRune:
+    anchors.left: parent.left
+    anchors.top: parent.top
+    margin-left: 28
+    color: #f40c0c
+    text-align: center
+
+  HorizontalSeparator
+    id: separatorOne
+    anchors.top: label.bottom
+    anchors.right: parent.right
+    anchors.left: parent.left
+    margin-top: 5
+    margin-bottom: 10
+
+  BotItem
+    id: item
+    anchors.left: parent.left
+    anchors.top: separatorOne.bottom
+    margin-top: 5
+
+  BotSwitch
+    id: switch
+    anchors.top: separatorOne.bottom
+    anchors.left: item.right
+    text-align: center
+    margin-left: 5
+    margin-top: 5
+    width: 142
+
+  HorizontalScrollBar
+    id: scroll
+    anchors.left: item.right
+    anchors.top: switch.bottom
+    anchors.right: switch.right
+    margin-left: 5
+    margin-top: 5
+    minimum: 1
+    maximum: 100
+    step: 1
+
+HealSpell < Panel
+  image-source: /images/ui/panel_flat
+  image-border: 6
+  padding: 3
+  size: 190 93
+
+  Label
+    id: label
+    text: Configurar Heal Spell:
+    anchors.left: parent.left
+    anchors.top: parent.top
+    margin-left: 28
+    color: #599dff
+    text-align: center
+
+  HorizontalSeparator
+    id: separatorOne
+    anchors.top: label.bottom
+    anchors.right: parent.right
+    anchors.left: parent.left
+    margin-top: 5
+    margin-bottom: 10
+
+  BotSwitch
+    id: switch
+    anchors.top: separatorOne.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    text-align: center
+    margin-left: 5
+    margin-right: 5
+    margin-top: 5
+    width: 142
+
+  BotTextEdit
+    id: text
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: switch.bottom
+    margin-left: 5
+    margin-right: 5
+    margin-top: 5
+
+  HorizontalScrollBar
+    id: scroll
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: text.bottom
+    margin-left: 5
+    margin-right: 5
+    margin-top: 5
+    minimum: 1
+    maximum: 100
+    step: 1
+
+AntiPara < Panel
+  image-source: /images/ui/panel_flat
+  image-border: 6
+  padding: 3
+  size: 190 117
+
+  Label
+    id: label
+    text: Configurar ANTI-Paralyze:
+    anchors.left: parent.left
+    anchors.top: parent.top
+    margin-left: 13
+    color: #dbff2a
+    text-align: center
+
+  HorizontalSeparator
+    id: separatorOne
+    anchors.top: label.bottom
+    anchors.right: parent.right
+    anchors.left: parent.left
+    margin-top: 5
+    margin-bottom: 10
+
+  BotItem
+    id: item
+    anchors.left: parent.left
+    anchors.top: separatorOne.bottom
+    margin-top: 7
+
+  BotSwitch
+    id: switchItem
+    anchors.top: separatorOne.bottom
+    anchors.left: item.right
+    anchors.right: parent.right
+    text-align: center
+    margin-right: 5
+    margin-left: 5
+    margin-top: 5
+    width: 142
+    !text: tr('Usar Item')
+
+  BotSwitch
+    id: switchSpell
+    anchors.left: item.right
+    anchors.top: switchItem.bottom
+    anchors.right: parent.right
+    text-align: center
+    margin-right: 5
+    margin-left: 5
+    margin-top: 5
+    width: 142
+    !text: tr('Usar Spell')
+
+  BotSwitch
+    id: switchAmbos
+    anchors.top: switchSpell.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    text-align: center
+    margin-right: 5
+    margin-top: 5
+    !text: tr('Usar Ambos')
+
+  BotTextEdit
+    id: text
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: switchAmbos.bottom
+    margin-right: 5
+    margin-top: 5
+
+HealerWindow < MainWindow
+  !text: tr('Configurar Healer')
+  size: 220 500
+  @onEscape: self:hide()
+
+  HorizontalSeparator
+    id: separatorOne
+    anchors.top: parent.top
+    anchors.right: parent.right
+    anchors.left: parent.left
+    margin-bottom: 10
+
+  ManaRune
+    id: mr
+    anchors.top: separatorOne.bottom
+    anchors.left: parent.left
+    margin-top: 10
+
+  HorizontalSeparator
+    id: separatorThree
+    anchors.top: mr.bottom
+    anchors.right: mr.right
+    anchors.left: parent.left
+    margin-top: 10
+
+  HealRune
+    id: hp
+    anchors.top: separatorThree.bottom
+    anchors.left: parent.left
+    margin-top: 10
+
+  HorizontalSeparator
+    id: separatorFour
+    anchors.top: hp.bottom
+    anchors.right: mr.right
+    anchors.left: parent.left
+    margin-top: 10
+
+  HealSpell
+    id: spell
+    anchors.top: separatorFour.bottom
+    anchors.left: parent.left
+    margin-top: 10
+
+  HorizontalSeparator
+    id: separatorFive
+    anchors.top: spell.bottom
+    anchors.right: mr.right
+    anchors.left: parent.left
+    margin-top: 10
+
+  AntiPara
+    id: paraz
+    anchors.top: separatorFive.bottom
+    anchors.left: parent.left
+    margin-top: 10
+
+  HorizontalSeparator
+    id: separatorTwo
+    anchors.right: parent.right
+    anchors.left: parent.left
+    anchors.bottom: close.top
+    margin-bottom: 5
+
+  Button
+    id: close
+    !text: tr('Cerrar')
+    color: green
+    $hover:
+      color: #ff2a2a
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    size: 20 20

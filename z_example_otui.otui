@@ -1,0 +1,28 @@
+ExpInfoWindow < MainWindow
+  !text: tr('Informacion')
+  size: 150 150
+  @onEscape: self:hide()
+
+  HorizontalSeparator
+    id: separator1
+    anchors.top: parent.top
+    anchors.right: parent.right
+    anchors.left: parent.left
+
+  HorizontalSeparator
+    id: separator2
+    anchors.right: parent.right
+    anchors.left: parent.left
+    anchors.bottom: close.top
+    margin-bottom: 5
+
+  Button
+    id: close
+    !text: tr('Cerrar')
+    color: green
+    $hover:
+      color: #ff2a2a
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    size: 20 20

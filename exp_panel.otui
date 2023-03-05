@@ -1,0 +1,25 @@
+ExpPanel < Panel
+  image-source: /images/ui/panel_flat
+  image-border: 6
+  padding: 3
+  size: 150 150
+
+  Label
+    id: label
+    text: Levels por Hora:
+    anchors.left: parent.left
+    anchors.top: parent.top
+    margin-left: 39
+    color: #599dff
+    text-align: center
+
+  Label
+    id: labelHour
+    width: 150
+    text: 0 (LvL * HR)
+    anchors.left: parent.left
+    anchors.top: prev.bottom
+    margin-left: 13
+    margin-top: 5
+    color: #4ae842
+    text-align: center

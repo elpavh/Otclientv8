@@ -1,0 +1,68 @@
+{
+  "looting": {
+    "items": [
+      {
+        "count": 0,
+        "id": 10329
+      },
+      {
+        "count": 0,
+        "id": 5922
+      },
+      {
+        "count": 0,
+        "id": 1781
+      },
+      {
+        "count": 0,
+        "id": 5896
+      }
+    ],
+    "maxDanger": 10,
+    "minCapacity": 100,
+    "containers": [
+      {
+        "count": 1,
+        "id": 10327
+      }
+    ],
+    "everyItem": false
+  },
+  "targeting": [
+    {
+      "useSpellAttack": false,
+      "useRuneAttack": false,
+      "minMana": 200,
+      "avoidAttacks": false,
+      "groupAttackTargets": 2,
+      "groupAttackSpell": "",
+      "danger": 1,
+      "runeAttackDelay": 2000,
+      "lureCavebot": false,
+      "dontLoot": false,
+      "useGroupAttackRune": false,
+      "groupRuneAttackRadius": 1,
+      "groupAttackIgnorePlayers": false,
+      "maxDistance": 10,
+      "groupAttackIgnoreParty": false,
+      "lureCount": 1,
+      "useGroupAttack": false,
+      "groupRuneAttackTargets": 2,
+      "attackSpell": "exevo vis mas",
+      "groupAttackRune": 0,
+      "groupAttackRadius": 1,
+      "keepDistanceRange": 1,
+      "groupRuneAttackDelay": 5000,
+      "priority": 1,
+      "attackRune": 0,
+      "groupAttackDelay": 5000,
+      "minManaGroup": 1600,
+      "lure": false,
+      "keepDistance": false,
+      "attackSpellDelay": 2500,
+      "chase": false,
+      "name": "Yeti Chan",
+      "regex": "^yeti chan$"
+    }
+  ]
+}

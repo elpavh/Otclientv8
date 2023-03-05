@@ -1,0 +1,9 @@
+colores: 
+
+
+amarillo: dbff2a
+azul claro: 599dff
+purpura: c559ff
+rojo: f40c0c
+azul fuerte: 2c8cff
+naranja: FF5733

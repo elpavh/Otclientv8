@@ -1,0 +1,137 @@
+macro(2000, "Testing", nil, function(macro)
+  local outfit = outfit()
+  outfit.type = 803
+  setOutfit(outfit);
+macro.setOff()
+end)
+
+local key = nil
+local parent = nil
+
+-- script
+local creatureId = 0
+
+macro(100, "Keep Attack", key, function()
+  if g_game.getFollowingCreature() then
+    creatureId = 0
+    return
+  end
+  local creature = g_game.getAttackingCreature()
+  if creature then
+    creatureId = creature:getId()
+  elseif creatureId > 0 then
+    local target = getCreatureById(creatureId)
+    if target then
+      attack(target)
+      delay(500)
+    end
+  end
+end)
+
+macro(50, "AutoManaRing", "", function()
+    if hppercent() >= 90 then
+        local ring = getInventoryItem(9)
+        g_game.move(ring, {x = 65535, y = 3, z = 0})
+    elseif hppercent() < 30 then
+        g_game.move(findItem(406), {x = 65535, y = 9, z = 0})
+    end
+end)
+
+
+macro(200, "Conseguir Target", "", function()
+  local target = g_game.getAttackingCreature()
+  if target then return end
+  if isInPz() then return end
+
+  for _, n in ipairs(getSpectators(false)) do
+    if n:isMonster() and getDistanceBetween(pos(), n:getPosition()) <= 1 then
+        if n then
+        local pos = n:getPosition()
+        local tile = g_map.getTile(pos)
+              attack(n)
+      end
+    end
+  end
+end)
+
+macro(200, "MR Sin Monsters", "", function()
+  local count = 0
+  for _, n in ipairs(getSpectators(false)) do
+    if n:isMonster() then
+    count = count + 1
+    if count >= 1 then return end
+    end
+  end
+
+  if hppercent() == 100 and manapercent() < 90 then
+    usewith(3182, player)
+  end
+end)
+
+local bloodrage = macro(1000, "Blood Rage", function() 
+  if player:getSkillLevel(4) <= 100 then
+    saySpell("Utito Tempo San", 200)
+  end
+end)
+
+sniperFullMacro = macro(200, "Sniper Full", "", function()
+    local players = 0
+    for _, n in ipairs(getSpectators(false)) do
+        if n:isPlayer() and n:getName() ~= name() then
+            players = players + 0
+        end
+    end
+
+    if players > 0 then
+        return
+    end
+
+    usewith(3151, player) 
+end)
+
+macro(80, "Medusa on 2", function()
+    local amount = 0
+    for _, n in ipairs(getSpectators(false)) do
+        if n:isMonster() and getDistanceBetween(pos(), n:getPosition()) <= 7 then
+            amount = amount + 1
+        end
+    end
+
+    if amount > 2 then
+        useWith(3151, player)
+    end
+end)
+
+macro(1500, "Medusa Random(cave)", "", function()
+if CaveBot.isOn() then
+  for _, n in ipairs(getSpectators(false)) do
+    if n:isMonster() and getDistanceBetween(pos(), n:getPosition()) <= 5 then
+        if n then
+            useWith(3151, player)
+        end
+    end
+  end
+end
+end)
+macro(500, "Medusa Random", "", function()
+  for _, n in ipairs(getSpectators(false)) do
+    if n:isMonster() and getDistanceBetween(pos(), n:getPosition()) <= 6 then
+        if n then
+            useWith(3151, n)
+        end
+    end
+  end
+end)
+macro(200, "MR Sin Monsters", "", function()
+  local count = 0
+  for _, n in ipairs(getSpectators(false)) do
+    if n:isMonster() then
+    count = count + 1
+    if count >= 1 then return end
+    end
+  end
+
+  if hppercent() == 100 and manapercent() < 95 or isInPz() and manapercent() < 95 then
+    usewith(3186, player)
+  end
+end)

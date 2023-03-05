@@ -1,0 +1,50 @@
+{
+  "looting": {
+    "items": [
+
+    ],
+    "maxDanger": 10,
+    "minCapacity": 100,
+    "containers": [
+
+    ],
+    "everyItem": false
+  },
+  "targeting": [
+    {
+      "useSpellAttack": true,
+      "useRuneAttack": true,
+      "minMana": 0,
+      "avoidAttacks": false,
+      "attackSpellDelay": 2000,
+      "groupAttackSpell": "",
+      "danger": 1,
+      "runeAttackDelay": 2000,
+      "lureCavebot": false,
+      "dontLoot": false,
+      "useGroupAttackRune": false,
+      "groupRuneAttackRadius": 1,
+      "groupAttackIgnorePlayers": false,
+      "maxDistance": 10,
+      "groupAttackIgnoreParty": false,
+      "lureCount": 1,
+      "useGroupAttack": false,
+      "groupRuneAttackTargets": 2,
+      "attackSpell": "exura vis deluxe",
+      "chase": false,
+      "priority": 1,
+      "keepDistanceRange": 1,
+      "keepDistance": false,
+      "groupAttackTargets": 2,
+      "groupAttackRune": 0,
+      "groupAttackRadius": 1,
+      "groupRuneAttackDelay": 5000,
+      "lure": false,
+      "attackRune": 3151,
+      "groupAttackDelay": 5000,
+      "minManaGroup": 1500,
+      "name": "Goblin Ninja",
+      "regex": "^goblin ninja$"
+    }
+  ]
+}

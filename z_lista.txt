@@ -1,0 +1,24 @@
+PvP
+    medusa al lado
+    target banderas
+    attack item
+    vip list checar
+    auto paralyze (checar contra items)
+
+PvE
+    check safe
+    item en uno mismo
+    spell system (rune, self, etc)
+    conseguir target
+
+
+main:
+    curar companeros
+    Misc.
+        checar aol
+        checar bless
+
+cambias a enemy list:
+    checar cuando login
+    mismo outfit
+    leader outfit

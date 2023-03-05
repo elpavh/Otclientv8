@@ -1,0 +1,333 @@
+HotkeyAssingWindow < Panel
+  id: assignWindow
+  !text: tr('Button Assign')
+  size: 360 150
+  @onEscape: self:destroy()
+
+  Label
+    !text: tr('Please, press the key you wish to use for action')
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: parent.top
+    text-auto-resize: true
+    text-align: left
+
+  Label
+    id: comboPreview
+    !text: tr('Current action hotkey: %s', 'none')
+    anchors.horizontalCenter: parent.horizontalCenter
+    anchors.top: prev.bottom
+    margin-top: 10
+    text-auto-resize: true
+
+  HorizontalSeparator
+    id: separator
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: next.top
+    margin-bottom: 10
+
+  Button
+    id: addButton
+    !text: tr('Add')
+    width: 64
+    anchors.right: next.left
+    anchors.bottom: parent.bottom
+    margin-right: 10
+
+  Button
+    id: cancelButton
+    !text: tr('Cancel')
+    width: 64
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    @onClick: self:getParent():destroy()
+
+AssignSpell < Panel
+  image-source: /images/ui/panel_flat
+  image-border: 6
+  padding: 3
+  size: 257 80
+
+  Label
+    id: labelText
+    text: Spell 1 a Lanzar:
+    anchors.top: parent.top
+    anchors.left: parent.left
+    color: #c559ff
+    size: 140 13
+    text-align: center
+
+  TextEdit
+    id: text
+    text: exori vis
+    anchors.top: labelText.bottom
+    anchors.left: parent.left
+    margin-top: 5
+    size: 140 23
+    text-align: center
+
+  Button
+    id: editHotkey
+    !text: tr('Editar Hotkey [F1]')
+    color: green
+    $hover:
+      color: #ff2a2a
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    margin-bottom: 5
+    size: 20 20
+
+  VerticalSeparator
+    id: separatorOne
+    anchors.top: parent.top
+    anchors.bottom: editHotkey.top
+    anchors.left: text.right
+    margin-left: 5
+    margin-bottom : 3
+
+  Label
+    id: labelText2
+    text: Lanzar en MS:
+    anchors.top: parent.top
+    anchors.left: separatorOne.right
+    margin-left: 5
+    color: #c559ff
+    size: 100 13
+    text-align: center
+
+  Label
+    id: labelText3
+    text: 500
+    anchors.top: labelText2.bottom
+    anchors.left: separatorOne.right
+    margin-top: 4
+    margin-left: 5
+    color: #c559ff
+    size: 100 13
+    text-align: center
+
+  HorizontalScrollBar
+    id: scroll
+    anchors.top: labelText3.bottom
+    anchors.left: separatorOne.right
+    anchors.right: parent.right
+    margin-left: 5
+    margin-top: 5
+    minimum: 20
+    maximum: 10000
+    step: 10
+
+AssignSpell2 < Panel
+  image-source: /images/ui/panel_flat
+  image-border: 6
+  padding: 3
+  size: 257 80
+
+  Label
+    id: labelText
+    text: Spell 2 a Lanzar:
+    anchors.top: parent.top
+    anchors.left: parent.left
+    color: #dbff2a
+    size: 140 13
+    text-align: center
+
+  TextEdit
+    id: text
+    text: exori flam
+    anchors.top: labelText.bottom
+    anchors.left: parent.left
+    margin-top: 5
+    size: 140 23
+    text-align: center
+
+  Button
+    id: editHotkey
+    !text: tr('Editar Hotkey [F2]')
+    color: green
+    $hover:
+      color: #ff2a2a
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    margin-bottom: 5
+    size: 20 20
+
+  VerticalSeparator
+    id: separatorOne
+    anchors.top: parent.top
+    anchors.bottom: editHotkey.top
+    anchors.left: text.right
+    margin-left: 5
+    margin-bottom : 3
+
+  Label
+    id: labelText2
+    text: Lanzar en MS:
+    anchors.top: parent.top
+    anchors.left: separatorOne.right
+    margin-left: 5
+    color: #dbff2a
+    size: 100 13
+    text-align: center
+
+  Label
+    id: labelText3
+    text: 10,000
+    anchors.top: labelText2.bottom
+    anchors.left: separatorOne.right
+    margin-top: 4
+    margin-left: 5
+    color: #dbff2a
+    size: 100 13
+    text-align: center
+
+  HorizontalScrollBar
+    id: scroll
+    anchors.top: labelText3.bottom
+    anchors.left: separatorOne.right
+    anchors.right: parent.right
+    margin-left: 5
+    margin-top: 5
+    minimum: 20
+    maximum: 10000
+    step: 10
+
+AssignSpell3 < Panel
+  image-source: /images/ui/panel_flat
+  image-border: 6
+  padding: 3
+  size: 257 80
+
+  Label
+    id: labelText
+    text: Spell 3 a Lanzar:
+    anchors.top: parent.top
+    anchors.left: parent.left
+    color: #599dff
+    size: 140 13
+    text-align: center
+
+  TextEdit
+    id: text
+    text: exori tera
+    anchors.top: labelText.bottom
+    anchors.left: parent.left
+    margin-top: 5
+    size: 140 23
+    text-align: center
+
+  Button
+    id: editHotkey
+    !text: tr('Editar Hotkey [F3]')
+    color: green
+    $hover:
+      color: #ff2a2a
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    margin-bottom: 5
+    size: 20 20
+
+  VerticalSeparator
+    id: separatorOne
+    anchors.top: parent.top
+    anchors.bottom: editHotkey.top
+    anchors.left: text.right
+    margin-left: 5
+    margin-bottom : 3
+
+  Label
+    id: labelText2
+    text: Lanzar en MS:
+    anchors.top: parent.top
+    anchors.left: separatorOne.right
+    margin-left: 5
+    color: #599dff
+    size: 100 13
+    text-align: center
+
+  Label
+    id: labelText3
+    text: 20
+    anchors.top: labelText2.bottom
+    anchors.left: separatorOne.right
+    margin-top: 4
+    margin-left: 5
+    color: #599dff
+    size: 100 13
+    text-align: center
+
+  HorizontalScrollBar
+    id: scroll
+    anchors.top: labelText3.bottom
+    anchors.left: separatorOne.right
+    anchors.right: parent.right
+    margin-left: 5
+    margin-top: 5
+    minimum: 20
+    maximum: 10000
+    step: 10
+
+HotkeyWindow < MainWindow
+  !text: tr('Configuracion de Spells (PvP)')
+  size: 290 338
+  @onEscape: self:hide()
+
+  HorizontalSeparator
+    id: separatorOne
+    anchors.top: parent.top
+    anchors.right: parent.right
+    anchors.left: parent.left
+
+  AssignSpell
+    id: spell1
+    anchors.top: separatorOne.bottom
+    anchors.left: parent.left
+    margin-top: 5
+
+  HorizontalSeparator
+    id: separatorThree
+    anchors.top: spell1.bottom
+    anchors.right: parent.right
+    anchors.left: parent.left
+    margin-top: 5
+
+  AssignSpell2
+    id: spell2
+    anchors.top: separatorThree.bottom
+    anchors.left: parent.left
+    margin-top: 5
+
+  HorizontalSeparator
+    id: separatorFour
+    anchors.top: spell2.bottom
+    anchors.right: parent.right
+    anchors.left: parent.left
+    margin-top: 5
+
+  AssignSpell3
+    id: spell3
+    anchors.top: separatorFour.bottom
+    anchors.left: parent.left
+    margin-top: 5
+
+  HorizontalSeparator
+    id: separatorTwo
+    anchors.right: parent.right
+    anchors.left: parent.left
+    anchors.bottom: close.top
+    margin-bottom: 5
+
+  Button
+    id: close
+    !text: tr('Cerrar')
+    color: green
+    $hover:
+      color: #ff2a2a
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    size: 20 20

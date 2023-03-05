@@ -1,0 +1,136 @@
+setDefaultTab("Tools")
+local panelName = "spySetup"
+local name = ""..g_game.getCharacterName()..""
+
+local spyLevel = 1
+SpyFloor = {}
+SpyFloor.values = {}
+
+local spyUI = setupUI([[
+Panel
+  height: 20
+
+  BotSwitch
+    id: switch
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.right: parent.right
+    text-align: center
+    width: 130
+    $on:
+      text: Ocultar Spy.
+      
+    $!on:
+      text: Configurar Spy.
+]])
+
+if not storage[panelName .. name] then
+    storage[panelName .. name] = {
+      saved_hotkeys = {},
+      saved_values = {}
+    }
+end
+
+local spyHotkey = UI.createWidget("RemoverWindow")
+spyHotkey:hide()
+
+local panels = {spyHotkey} -- All panels on this table will be looped and auto connected to the botton "close".
+
+spyUI.switch:setOn(storage[panelName .. name].active)
+
+SpyFloor.setup = function()
+  SpyFloor.ui = UI.createWidget("SpyPanel")
+  local add = SpyFloor.add
+
+  add("floorDown", "Mirar Abajo", true, "button")
+  add("floorUp", "Mirar Arriba", true, "button")
+  add("floorReset", "Reset Spy", true, "button")
+end
+
+SpyFloor.show = function()
+  SpyFloor.ui:show()
+end
+
+SpyFloor.hide = function()
+  SpyFloor.ui:hide()
+end
+
+SpyFloor.add = function(id, title, defaultValue, uiType, windowName)
+  if SpyFloor.values[id] then
+    return error("Duplicated config key: " .. id)
+  end
+
+  if storage[panelName .. name].saved_values[id] == nil then
+    storage[panelName .. name].saved_values[id] = defaultValue
+  end
+
+  local panel
+  if uiType == "button" then
+    panel = UI.createWidget("SpyButton", SpyFloor.ui)
+    --panel.value:setText(storage[panelName .. name].saved_values[id])
+    --SpyFloor.values[id] = storage[panelName .. name].saved_values[id]
+    panel.button.onClick = function(widget)
+        --function for spy.
+      end
+  else
+    return error("uiType not known for ID: "..id..".")
+  end
+end
+
+spyUI.switch.onClick = function()
+  if not Misc then return end
+  if spyUI.switch:isOn() then
+    SpyFloor.hide()
+    spyUI.switch:setOn(false)
+    storage[panelName .. name].active = false
+  else
+    SpyFloor.show()
+    spyUI.switch:setOn(true)
+    storage[panelName .. name].active = true
+  end
+end
+
+SpyFloor.get = function(id)
+  if storage[panelName .. name].saved_values[id] == nil then
+    return error("The selected ID doesn't exist, id: " .. id)
+  end
+  return storage[panelName .. name].saved_values[id]
+end
+
+SpyFloor.setup()
+
+-- Loops trought panels table to create the onClick callback.
+for _, p in pairs(panels) do
+  p.close.onClick = function(widget)
+    if p:isVisible() then
+      p:hide()
+      return
+    end
+    p:show()
+  end
+end
+
+if storage[panelName .. name].active then
+  SpyFloor.show()
+  spyUI.switch:setOn(true)
+else
+  SpyFloor.hide()
+  spyUI.switch:setOn(false)
+end
+
+-- hotkey("=", "Spy UP", function()
+--   modules.game_interface.getMapPanel():lockVisibleFloor(posz() - spyLevel)
+--   spyLevel = spyLevel + 1
+-- end)
+
+-- hotkey("-", "Spy DOWN", function()
+--   modules.game_interface.getMapPanel():lockVisibleFloor(posz() + spyLevel)
+--   spyLevel = spyLevel + 1
+-- end)
+
+-- hotkey("`", "Free Spy", function()
+--   modules.game_interface.getMapPanel():unlockVisibleFloor()
+--   spyLevel = 1
+-- end)
+
+UI.Separator()

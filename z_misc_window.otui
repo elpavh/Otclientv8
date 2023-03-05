@@ -1,0 +1,240 @@
+ItemUse < Panel
+  layout:
+    type: verticalBox
+    fit-children: true
+
+  BotContainer
+    id: items
+    margin-top: 3
+
+MiscPanel < Panel
+  id: miscPanel
+  visible: false
+  
+  layout:
+    type: verticalBox
+    fit-children: true
+  
+  HorizontalSeparator
+    margin-top: 5
+
+  Label
+    text-align: center
+    text: Configuracion de Misc.
+    color: #2c8cff
+    margin-top: 5
+
+MiscNumber < Panel
+  height: 20
+  margin-top: 5
+  
+  BotTextEdit
+    id: value
+    anchors.right: parent.right
+    anchors.top: parent.top
+    anchors.bottom: parent.bottom
+    margin-right: 5
+    width: 50
+
+  Label
+    id: title
+    anchors.left: parent.left
+    anchors.verticalCenter: prev.verticalCenter
+    margin-left: 5
+
+MiscSwitch < Panel
+  height: 20
+  margin-top: 5
+  
+  BotSwitch
+    id: value
+    anchors.right: parent.right
+    anchors.top: parent.top
+    anchors.bottom: parent.bottom
+    margin-right: 5
+    width: 30
+    $on:
+      text: On   
+    $!on:
+      text: Off
+
+  Label
+    id: title
+    anchors.left: parent.left
+    anchors.verticalCenter: prev.verticalCenter
+    margin-left: 5
+
+MiscSwitchEdit < Panel
+  height: 20
+  margin-top: 5
+  
+  BotSwitch
+    id: value
+    anchors.right: parent.right
+    anchors.top: parent.top
+    anchors.bottom: parent.bottom
+    margin-right: 5
+    width: 30
+    $on:
+      text: On
+    $!on:
+      text: Off
+
+  Label
+    id: title
+    anchors.left: parent.left
+    anchors.verticalCenter: prev.verticalCenter
+    margin-left: 5
+
+  Button
+    id: edit
+    !text: tr('Edit')
+    color: #19ffd2
+    $hover:
+      color: #ff2a2a
+    anchors.top: value.top
+    anchors.bottom: value.bottom
+    anchors.right: value.left
+    margin-right: 3
+    width: 27
+    height: 18
+
+HurWindow < Panel
+  height: 20
+  margin-top: 5
+  size: 150 75
+
+  HorizontalSeparator
+    id: separator1
+    anchors.top: parent.top
+    anchors.right: parent.right
+    anchors.left: parent.left
+
+  Label
+    id: label1
+    text: Utani Spell:
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: separator1.bottom
+    margin-top: 5
+    color: #c559ff
+    text-align: center
+
+  BotTextEdit
+    id: hurValue
+    text: utani hur
+    anchors.right: parent.right
+    anchors.left: parent.left
+    anchors.top: label1.bottom
+    margin-top: 5
+
+  HorizontalSeparator
+    id: separator2
+    anchors.right: parent.right
+    anchors.left: parent.left
+    anchors.bottom: close.top
+    margin-bottom: 5
+
+  Button
+    id: close
+    !text: tr('Cerrar')
+    color: green
+    $hover:
+      color: #ff2a2a
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    size: 20 20
+
+ReuseWindow < Panel
+  margin-top: 5
+  size: 150 125
+
+  HorizontalSeparator
+    id: separatorOne
+    anchors.top: parent.top
+
+  Label
+    id: label1
+    width: 100
+    text: Items a ReUsar:
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: separatorOne.bottom
+    margin-top: 5
+    color: #c559ff
+    text-align: center
+
+  TextList
+    id: itemList
+    size: 75 75
+    anchors.top: label1.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 5
+    margin-bottom: 10
+
+  HorizontalSeparator
+    id: separatorTwo
+    anchors.right: parent.right
+    anchors.left: parent.left
+    anchors.bottom: close.top
+    margin-bottom: 5
+
+  Button
+    id: close
+    !text: tr('Cerrar')
+    color: green
+    $hover:
+      color: #ff2a2a
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    size: 20 20
+
+RemoverWindow < Panel
+  height: 20
+  margin-top: 5
+  size: 150 75
+
+  HorizontalSeparator
+    id: separator1
+    anchors.top: parent.top
+    anchors.right: parent.right
+    anchors.left: parent.left
+
+  Label
+    id: label1
+    text: Remover ID:
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: separator1.bottom
+    margin-top: 5
+    color: #c559ff
+    text-align: center
+
+  BotTextEdit
+    id: removerValue
+    text: 688
+    anchors.right: parent.right
+    anchors.left: parent.left
+    anchors.top: label1.bottom
+    margin-top: 5
+
+  HorizontalSeparator
+    id: separator2
+    anchors.right: parent.right
+    anchors.left: parent.left
+    anchors.bottom: close.top
+    margin-bottom: 5
+
+  Button
+    id: close
+    !text: tr('Cerrar')
+    color: green
+    $hover:
+      color: #ff2a2a
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    size: 20 20

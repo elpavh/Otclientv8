@@ -1,0 +1,90 @@
+SpyPanel < Panel
+  id: spyPanel
+  visible: false
+  
+  layout:
+    type: verticalBox
+    fit-children: true
+  
+  HorizontalSeparator
+    margin-top: 5
+
+  Label
+    text-align: center
+    text: Configuracion de SpyFloor.
+    color: #FF5733
+    margin-top: 5
+
+SpyButton < Panel
+  height: 20
+  margin-top: 5
+  
+  Button
+    id: button
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: parent.top
+    size: 20 20
+
+SpyHotkeyWindow < Panel
+  height: 20
+  margin-top: 5
+  size: 150 122
+
+  HorizontalSeparator
+    id: separator1
+    anchors.top: parent.top
+    anchors.right: parent.right
+    anchors.left: parent.left
+
+  Label
+    id: label1
+    text: Edita tus Hotkeys:
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: separator1.bottom
+    margin-top: 5
+    color: #c559ff
+    text-align: center
+
+  Button
+    id: hotkey1
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: label1.bottom
+    margin-top: 5
+    size: 20 20
+
+  Button
+    id: hotkey2
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: hotkey1.bottom
+    margin-top: 5
+    size: 20 20
+
+  Button
+    id: hotkey3
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: hotkey2.bottom
+    margin-top: 5
+    size: 20 20
+
+  HorizontalSeparator
+    id: separator2
+    anchors.right: parent.right
+    anchors.left: parent.left
+    anchors.bottom: close.top
+    margin-bottom: 5
+
+  Button
+    id: close
+    !text: tr('Cerrar')
+    color: green
+    $hover:
+      color: #ff2a2a
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    size: 20 20

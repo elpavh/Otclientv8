@@ -1,0 +1,162 @@
+EnemyRow < Label
+  background-color: #56676f
+  focusable: true
+  height: 16
+  $focus:
+    background-color: #448bc7
+  text-offset: 3 0
+
+  Button
+    id: delete
+    !text: tr('X')
+    anchors.right: parent.right
+    margin-top: 1
+    margin-bottom: 1
+    margin-right: 3
+    width: 15
+    height: 15
+
+Enemy < Panel
+  image-source: /images/ui/panel_flat
+  image-border: 6
+  padding: 3
+  size: 225 415
+
+  TextList
+    id: enList
+    size: 197 250
+    border-width: 1
+    border-color: #000000
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 5
+    margin-right: 5
+    margin-left: 5
+    margin-bottom: 10
+    padding: 1
+    focusable: false
+    vertical-scrollbar: enListScrollBar
+
+  VerticalScrollBar
+    id: enListScrollBar
+    anchors.top: enList.top
+    anchors.bottom: enList.bottom
+    anchors.left: enList.right
+    margin-left: 3
+    step: 14
+    pixels-scroll: true
+
+  TextEdit
+    id: text
+    anchors.left: enList.left
+    anchors.right: enListScrollBar.right
+    anchors.top: enList.bottom
+    margin-top: 5
+
+  Button
+    id: add
+    !text: tr('Agregar')
+    color: green
+    $hover:
+      color: #ff2a2a
+    anchors.left: enList.left
+    anchors.right: enListScrollBar.right
+    anchors.top: text.bottom
+    margin-top: 5
+    size: 20 20
+
+  HorizontalSeparator
+    id: separatorOne
+    anchors.top: add.bottom
+    anchors.right: add.right
+    anchors.left: add.left
+    margin-top: 5
+
+  Label
+    id: labelGuardar
+    text: Pasar / Cargar Configs
+    anchors.left: parent.left
+    anchors.top: separatorOne.bottom
+    margin-left: 35
+    margin-top: 5
+    margin-bottom: 7
+    color: #599dff
+    text-align: center
+
+  TextEdit
+    id: guardarText
+    anchors.left: enList.left
+    anchors.right: enListScrollBar.right
+    anchors.top: labelGuardar.bottom
+    margin-top: 5
+
+  Button
+    id: pasar
+    !text: tr('Pasar Configuracion')
+    color: #7aadf7
+    $hover:
+      color: #1c78fe
+    anchors.left: enList.left
+    anchors.right: enListScrollBar.right
+    anchors.top: guardarText.bottom
+    margin-top: 5
+    size: 20 20
+
+  Button
+    id: cargar
+    !text: tr('Cargar Configuracion')
+    color: #e3aeff
+    $hover:
+      color: #c559ff
+    anchors.left: enList.left
+    anchors.right: enListScrollBar.right
+    anchors.top: pasar.bottom
+    margin-top: 5
+    size: 20 20
+
+EnemyWindow < MainWindow
+  !text: tr('Enemy List')
+  size: 255 516
+  @onEscape: self:hide()
+
+  HorizontalSeparator
+    id: separatorOne
+    anchors.top: parent.top
+    anchors.right: parent.right
+    anchors.left: parent.left
+    margin-bottom: 10
+
+  Label
+    id: labelEnemy
+    text: Configurar Enemy List
+    anchors.left: parent.left
+    anchors.top: parent.top
+    margin-left: 45
+    margin-top: 5
+    margin-bottom: 7
+    color: #f40c0c
+    text-align: center
+
+  Enemy
+    id: enemy
+    anchors.top: labelEnemy.bottom
+    anchors.left: parent.left
+    margin-top: 5
+
+  HorizontalSeparator
+    id: separatorTwo
+    anchors.right: parent.right
+    anchors.left: parent.left
+    anchors.bottom: close.top
+    margin-bottom: 5
+
+  Button
+    id: close
+    !text: tr('Cerrar')
+    color: green
+    $hover:
+      color: #ff2a2a
+    anchors.left: parent.left
+    anchors.right: enemy.right
+    anchors.bottom: parent.bottom
+    size: 20 20

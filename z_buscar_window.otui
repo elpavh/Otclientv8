@@ -1,0 +1,244 @@
+BuscarPanel < Panel
+  image-source: /images/ui/panel_flat
+  image-border: 6
+  padding: 3
+  size: 260 160
+
+  Label
+    id: label1
+    text: Nombre:
+    anchors.left: parent.left
+    anchors.top: parent.top
+    color: #c559ff
+    text-align: center
+
+  Label
+    id: label2
+    width: 200
+    anchors.right: parent.right
+    anchors.top: parent.top
+    color: #dbff2a
+    text-align: right
+
+  HorizontalSeparator
+    id: separator1
+    anchors.top: label2.bottom
+    anchors.right: parent.right
+    anchors.left: parent.left
+
+  Label
+    id: label3
+    text: Nivel:
+    anchors.left: parent.left
+    anchors.top: separator1.bottom
+    margin-top: 3
+    color: #c559ff
+    text-align: center
+
+  Label
+    id: label4
+    width: 200
+    anchors.right: parent.right
+    anchors.top: separator1.bottom
+    margin-top: 3
+    color: #2c8cff
+    text-align: right
+
+  HorizontalSeparator
+    id: separator2
+    anchors.top: label4.bottom
+    anchors.right: parent.right
+    anchors.left: parent.left
+
+  Label
+    id: label5
+    text: Vocation:
+    anchors.left: parent.left
+    anchors.top: separator2.bottom
+    margin-top: 3
+    color: #c559ff
+    text-align: center
+
+  Label
+    id: label6
+    width: 200
+    anchors.right: parent.right
+    anchors.top: separator2.bottom
+    margin-top: 3
+    margin-left: 5
+    color: #ff992c
+    text-align: right
+
+  HorizontalSeparator
+    id: separator3
+    anchors.top: label6.bottom
+    anchors.right: parent.right
+    anchors.left: parent.left
+
+  Label
+    id: label7
+    text: Status:
+    anchors.left: parent.left
+    anchors.top: separator3.bottom
+    margin-top: 3
+    color: #c559ff
+    text-align: center
+
+  Label
+    id: label8
+    width: 200
+    text: Offline
+    anchors.right: parent.right
+    anchors.top: separator3.bottom
+    margin-top: 3
+    margin-left: 5
+    color: #f40c0c
+    text-align: right
+
+  HorizontalSeparator
+    id: separator4
+    anchors.top: label8.bottom
+    anchors.right: parent.right
+    anchors.left: parent.left
+
+  Label
+    id: label9
+    text: Last Login:
+    anchors.left: parent.left
+    anchors.top: separator4.bottom
+    margin-top: 3
+    color: #c559ff
+    text-align: center
+
+  Label
+    id: label10
+    width: 150
+    text: NaN
+    anchors.right: parent.right
+    anchors.top: separator4.bottom
+    margin-top: 3
+    margin-left: 5
+    color: #f40c0c
+    text-align: right
+
+  HorizontalSeparator
+    id: separator5
+    anchors.top: label10.bottom
+    anchors.right: parent.right
+    anchors.left: parent.left
+
+  Label
+    id: label11
+    text: Tiempo Offline:
+    anchors.left: parent.left
+    anchors.top: separator5.bottom
+    margin-top: 3
+    color: #c559ff
+    text-align: center
+
+  Label
+    id: label12
+    width: 250
+    anchors.right: parent.right
+    anchors.top: label11.bottom
+    margin-top: 3
+    color: #f40c0c
+    text-align: center
+
+  HorizontalSeparator
+    id: separator6
+    anchors.top: label12.bottom
+    anchors.right: parent.right
+    anchors.left: parent.left
+
+  Label
+    id: label13
+    text: Guild:
+    anchors.left: parent.left
+    anchors.top: separator6.bottom
+    margin-top: 3
+    color: #c559ff
+    text-align: center
+
+  Label
+    id: label14
+    width: 200
+    anchors.right: parent.right
+    anchors.top: separator6.bottom
+    margin-top: 3
+    margin-left: 5
+    color: #f40c0c
+    text-align: right
+
+  HorizontalSeparator
+    id: separator7
+    anchors.top: label14.bottom
+    anchors.right: parent.right
+    anchors.left: parent.left
+
+  Button
+    id: deathList
+    !text: tr('Mirar DeathList')
+    color: #dbff2a
+    $hover:
+      color: #2c8cff
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: separator7.bottom
+    margin-top: 2
+    size: 20 20
+
+BuscarWindow < MainWindow
+  !text: tr('Informacion de Personaje')
+  size: 290 285
+  @onEscape: self:hide()
+
+  HorizontalSeparator
+    id: separator1
+    anchors.top: parent.top
+    anchors.right: parent.right
+    anchors.left: parent.left
+
+  BuscarPanel
+    id: buscar
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 5
+
+  BotTextEdit
+    id: text
+    text: Ponid Grinch
+    anchors.left: buscar.left
+    anchors.right: buscar.right
+    anchors.top: buscar.bottom
+    margin-top: 5
+
+  Button
+    id: get
+    !text: tr('Buscar')
+    color: #dbff2a
+    $hover:
+      color: #2c8cff
+    anchors.left: buscar.left
+    anchors.right: buscar.right
+    anchors.top: text.bottom
+    size: 20 20
+    margin-top: 5
+
+  HorizontalSeparator
+    id: separator2
+    anchors.right: parent.right
+    anchors.left: parent.left
+    anchors.bottom: close.top
+    margin-bottom: 5
+
+  Button
+    id: close
+    !text: tr('Cerrar')
+    color: green
+    $hover:
+      color: #ff2a2a
+    anchors.left: buscar.left
+    anchors.right: buscar.right
+    anchors.bottom: parent.bottom
+    size: 20 20

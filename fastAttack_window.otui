@@ -1,0 +1,98 @@
+FastAtkWindow < MainWindow
+  !text: tr('Configurar Fast Attack')
+  size: 330 130
+  @onEscape: self:hide()
+
+  HorizontalSeparator
+    id: separatorOne
+    anchors.top: parent.top
+    anchors.right: parent.right
+    anchors.left: parent.left
+    margin-bottom: 50
+
+  VerticalSeparator
+    id: separatorThree
+    anchors.top: separatorOne.bottom
+    anchors.right: parent.horizontalCenter
+    anchors.bottom: separatorTwo.top
+    margin-left: 10
+    margin-top: 2
+    margin-bottom: 2
+
+  Label
+    id: labelScroll
+    text: Usar (en milisegundos):
+    color: #c559ff
+    anchors.top: separatorOne.bottom
+    anchors.left: separatorThree.right
+    margin-top: 3
+    margin-left: 10
+
+  Label
+    id: labelCount
+    width: 60
+    anchors.left: labelScroll.left
+    anchors.top: labelScroll.bottom
+    text-align: center
+    margin-top: 6
+    margin-left: 45
+
+  HorizontalScrollBar
+    id: scrollPorVes
+    anchors.left: separatorThree.right
+    anchors.right: parent.right
+    anchors.bottom: separatorTwo.top
+    margin-left: 10
+    margin-bottom: 7
+    minimum: 20
+    maximum: 10000
+    step: 1
+    &disableScroll: true
+
+  Label
+    id: labelPorUso
+    text: Ataque por uso:
+    color: #599dff
+    anchors.top: separatorOne.bottom
+    anchors.right: separatorThree.left
+    text-align: center
+    margin-right: 35
+    margin-top: 3
+
+  Label
+    id: labelUsoCount
+    width: 60
+    anchors.left: labelPorUso.left
+    anchors.top: labelPorUso.bottom
+    text-align: center
+    margin-top: 6
+    margin-left: 23
+
+  HorizontalScrollBar
+    id: scrollPorUso
+    anchors.left: parent.left
+    anchors.right: separatorThree.left
+    anchors.bottom: separatorTwo.top
+    minimum: 1
+    maximum: 300
+    margin-bottom: 7
+    margin-right: 10
+    &disableScroll: true
+
+  HorizontalSeparator
+    id: separatorTwo
+    anchors.right: parent.right
+    anchors.left: parent.left
+    anchors.bottom: close.top
+    margin-bottom: 5
+
+  Button
+    id: close
+    !text: tr('Cerrar')
+    color: green
+    $hover:
+      color: #ff2a2a
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    size: 20 20

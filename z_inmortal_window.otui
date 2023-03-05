@@ -1,0 +1,112 @@
+PonerHP < Panel
+  image-source: /images/ui/panel_flat
+  image-border: 6
+  padding: 3
+  size: 200 48
+
+  Label
+    id: label
+    anchors.left: parent.left
+    anchors.top: parent.top
+    margin-left: 15
+    color: #f40c0c
+    text-align: center
+
+  HorizontalSeparator
+    id: separatorOne
+    anchors.top: label.bottom
+    anchors.right: parent.right
+    anchors.left: parent.left
+    margin-top: 5
+    margin-bottom: 10
+
+  HorizontalScrollBar
+    id: scroll
+    anchors.top: separatorOne.bottom
+    anchors.right: parent.right
+    anchors.left: parent.left
+    margin-top: 5
+    minimum: 1
+    maximum: 100
+    step: 1
+
+QuitarHP < Panel
+  image-source: /images/ui/panel_flat
+  image-border: 6
+  padding: 3
+  size: 200 48
+
+  Label
+    id: label
+    anchors.left: parent.left
+    anchors.top: parent.top
+    margin-left: 15
+    color: #dbff2a
+    text-align: center
+
+  HorizontalSeparator
+    id: separatorOne
+    anchors.top: label.bottom
+    anchors.right: parent.right
+    anchors.left: parent.left
+    margin-top: 5
+    margin-bottom: 10
+
+  HorizontalScrollBar
+    id: scroll
+    anchors.top: separatorOne.bottom
+    anchors.right: parent.right
+    anchors.left: parent.left
+    margin-top: 5
+    minimum: 1
+    maximum: 100
+    step: 1
+
+InmortalWindow < MainWindow
+  !text: tr('Configurar HP de Inmortal')
+  size: 230 190
+  @onEscape: self:hide()
+
+  HorizontalSeparator
+    id: separatorOne
+    anchors.top: parent.top
+    anchors.right: parent.right
+    anchors.left: parent.left
+    margin-bottom: 50
+
+  PonerHP
+    id: PonerHP
+    anchors.left: parent.left
+    anchors.top: separatorOne.bottom
+    margin-top: 10
+
+  HorizontalSeparator
+    id: separatorThree
+    anchors.right: parent.right
+    anchors.left: parent.left
+    anchors.top: PonerHP.bottom
+    margin-bottom: 5
+
+  QuitarHP
+    id: QuitarHP
+    anchors.left: parent.left
+    anchors.top: separatorThree.bottom
+    margin-top: 10
+
+  HorizontalSeparator
+    id: separatorTwo
+    anchors.right: parent.right
+    anchors.left: parent.left
+    anchors.bottom: close.top
+    margin-bottom: 5
+
+  Button
+    id: close
+    !text: tr('Cerrar')
+    color: green
+    $hover:
+      color: #ff2a2a
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    size: 20 20

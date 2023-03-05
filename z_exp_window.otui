@@ -1,0 +1,150 @@
+ExpInfoWindow < MainWindow
+  !text: tr('Informacion')
+  size: 300 185
+  @onEscape: self:hide()
+
+  HorizontalSeparator
+    id: separatorOne
+    anchors.top: parent.top
+    anchors.right: parent.right
+    anchors.left: parent.left
+
+  Label
+    id: label
+    text: Levels por Hora:
+    anchors.left: parent.left
+    anchors.top: parent.top
+    margin-left: 90
+    margin-top: 5
+    color: #599dff
+    text-align: center
+
+  Label
+    id: labelHour
+    width: 150
+    text: 0 (LvL * HR)
+    anchors.left: parent.left
+    anchors.top: prev.bottom
+    margin-left: 64
+    margin-top: 5
+    color: #4ae842
+    text-align: center
+
+  HorizontalSeparator
+    id: separatorThree
+    anchors.right: parent.right
+    anchors.left: parent.left
+    anchors.top: labelHour.bottom
+    margin-top: 7
+    margin-bottom: 5
+
+  Label
+    id: labelCount
+    width: 122
+    text: Nivel proyectado en:
+    anchors.left: parent.left
+    anchors.top: separatorThree.bottom
+    margin-left: 35
+    margin-top: 15
+    color: #dbff2a
+
+  SpinBox
+    id: expCount
+    anchors.bottom: labelCount.bottom
+    anchors.left: labelCount.right
+    margin-left: 4
+    width: 40
+    height: 20
+    minimum: 1
+    maximum: 100
+    focusable: true
+
+  Label
+    id: labelHora
+    width: 37
+    text: hora.
+    anchors.left: expCount.right
+    anchors.top: labelCount.top
+    margin-left: 3
+    color: #dbff2a
+    text-align: center
+
+  HorizontalSeparator
+    id: separatorFour
+    anchors.right: parent.right
+    anchors.left: parent.left
+    anchors.top: labelHora.bottom
+    margin-top: 5
+    margin-bottom: 5
+
+  Label
+    id: labelResultOne
+    width: 15
+    text: En
+    anchors.left: parent.left
+    anchors.top: separatorFour.bottom
+    margin-top: 5
+    margin-left: 5
+    color: #f40c0c
+    text-align: center
+
+  Label
+    id: labelResultTwo
+    width: 20
+    text: 1
+    anchors.left: labelResultOne.right
+    anchors.top: separatorFour.bottom
+    margin-top: 5
+    margin-left: 2
+    color: #c559ff
+    text-align: center
+
+  Label
+    id: labelHoraThree
+    width: 33
+    text: hora
+    anchors.left: labelResultTwo.right
+    anchors.top: separatorFour.bottom
+    margin-top: 5
+    margin-left: 3
+    color: #f40c0c
+    text-align: center
+
+  Label
+    id: labelHoraFour
+    width: 200
+    text: esta proyectado que seas nivel:
+    anchors.left: labelHoraThree.right
+    anchors.top: separatorFour.bottom
+    margin-top: 5
+    margin-left: 3
+    color: #f40c0c
+
+  Label
+    id: labelResultFive
+    width: 100
+    text: 0
+    anchors.left: labelHoraFour.left
+    anchors.top: labelHoraFour.bottom
+    margin-top: 5
+    margin-left: 2
+    color: #c559ff
+    text-align: center
+
+  HorizontalSeparator
+    id: separatorTwo
+    anchors.right: parent.right
+    anchors.left: parent.left
+    anchors.bottom: close.top
+    margin-bottom: 5
+
+  Button
+    id: close
+    !text: tr('Cerrar')
+    color: green
+    $hover:
+      color: #ff2a2a
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    size: 20 20

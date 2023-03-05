@@ -1,0 +1,89 @@
+CigarroWindow < MainWindow
+  !text: tr('Configurar Cigarro')
+  size: 330 130
+  @onEscape: self:hide()
+
+  HorizontalSeparator
+    id: separatorOne
+    anchors.top: parent.top
+    anchors.right: parent.right
+    anchors.left: parent.left
+    margin-bottom: 50
+
+  VerticalSeparator
+    id: separatorThree
+    anchors.top: separatorOne.bottom
+    anchors.right: parent.horizontalCenter
+    anchors.bottom: separatorTwo.top
+    margin-left: 10
+    margin-top: 2
+    margin-bottom: 2
+
+  Label
+    id: labelScroll
+    text: Usar (en milisegundos):
+    color: #599dff
+    anchors.left: separatorThree.right
+    anchors.top: separatorOne.bottom
+    text-align: center
+    margin-left: 10
+    margin-top: 3
+    margin-bottom: 7
+
+  Label
+    id: labelCount
+    width: 50
+    anchors.right: labelScroll.right
+    anchors.left: labelScroll.left
+    anchors.bottom: scroll.top
+    text-align: center
+    margin-bottom: 7
+    margin-left: 10
+
+  HorizontalScrollBar
+    id: scroll
+    anchors.left: separatorThree.right
+    anchors.right: parent.right
+    anchors.bottom: separatorTwo.top
+    margin-left: 10
+    margin-bottom: 7
+    minimum: 20
+    maximum: 3000
+    step: 10
+    &disableScroll: true
+
+  Label
+    id: labelItem
+    text: Cigarro ID
+    color: #dbff2a
+    anchors.top: separatorOne.bottom
+    anchors.right: separatorThree.left
+    text-align: center
+    margin-right: 50
+    margin-top: 3
+    margin-bottom: 7
+
+  BotItem
+    id: item
+    anchors.left: labelItem.left
+    anchors.bottom: separatorTwo.top
+    margin-bottom: 7
+    margin-left: 15
+
+  HorizontalSeparator
+    id: separatorTwo
+    anchors.right: parent.right
+    anchors.left: parent.left
+    anchors.bottom: close.top
+    margin-bottom: 5
+
+  Button
+    id: close
+    !text: tr('Cerrar')
+    color: green
+    $hover:
+      color: #ff2a2a
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    size: 20 20

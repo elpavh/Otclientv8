@@ -1,0 +1,190 @@
+BotOpPanel < Panel
+  id: botPanel
+  visible: false
+  
+  layout:
+    type: verticalBox
+    fit-children: true
+  
+  HorizontalSeparator
+    margin-top: 5
+
+  Label
+    text-align: center
+    text: Configuracion de Botting.
+    color: #FF5733
+    margin-top: 5
+
+BotOpNumber < Panel
+  height: 20
+  margin-top: 5
+  
+  BotTextEdit
+    id: value
+    anchors.right: parent.right
+    anchors.top: parent.top
+    anchors.bottom: parent.bottom
+    margin-right: 5
+    width: 50
+
+  Label
+    id: title
+    anchors.left: parent.left
+    anchors.verticalCenter: prev.verticalCenter
+    margin-left: 5
+
+BotOpSwitch < Panel
+  height: 20
+  margin-top: 5
+  
+  BotSwitch
+    id: value
+    anchors.right: parent.right
+    anchors.top: parent.top
+    anchors.bottom: parent.bottom
+    margin-right: 5
+    width: 30
+    $on:
+      text: On   
+    $!on:
+      text: Off
+
+  Label
+    id: title
+    anchors.left: parent.left
+    anchors.verticalCenter: prev.verticalCenter
+    margin-left: 5
+
+BotOpSwitchEdit < Panel
+  height: 20
+  margin-top: 5
+  
+  BotSwitch
+    id: value
+    anchors.right: parent.right
+    anchors.top: parent.top
+    anchors.bottom: parent.bottom
+    margin-right: 5
+    width: 30
+    $on:
+      text: On
+    $!on:
+      text: Off
+
+  Label
+    id: title
+    anchors.left: parent.left
+    anchors.verticalCenter: prev.verticalCenter
+    margin-left: 5
+
+  Button
+    id: edit
+    !text: tr('Edit')
+    color: #19ffd2
+    $hover:
+      color: #ff2a2a
+    anchors.top: value.top
+    anchors.bottom: value.bottom
+    anchors.right: value.left
+    margin-right: 3
+    width: 27
+    height: 18
+
+RuneSpamWindow < Panel
+  height: 20
+  margin-top: 5
+  size: 150 75
+
+  HorizontalSeparator
+    id: separator1
+    anchors.top: parent.top
+    anchors.right: parent.right
+    anchors.left: parent.left
+
+  Label
+    id: label1
+    text: Rune Spam:
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: separator1.bottom
+    margin-top: 5
+    color: #c559ff
+    text-align: center
+
+  ComboBox
+    id: runaValue
+    text: 688
+    anchors.right: parent.right
+    anchors.left: parent.left
+    anchors.top: label1.bottom
+    margin-top: 5
+    @onSetup: |
+      self:addOption("Medusa")
+      self:addOption("Morgana")
+      self:addOption("Sniper")
+      self:addOption("Earth")
+
+  HorizontalSeparator
+    id: separator2
+    anchors.right: parent.right
+    anchors.left: parent.left
+    anchors.top: runaValue.bottom
+    margin-top: 5
+
+  Button
+    id: close
+    !text: tr('Cerrar')
+    color: green
+    $hover:
+      color: #ff2a2a
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    size: 20 20
+
+SpellWindow < Panel
+  height: 20
+  margin-top: 5
+  size: 150 75
+
+  HorizontalSeparator
+    id: separator1
+    anchors.top: parent.top
+    anchors.right: parent.right
+    anchors.left: parent.left
+
+  Label
+    id: label1
+    text: Spell a Spam:
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: separator1.bottom
+    margin-top: 5
+    color: #c559ff
+    text-align: center
+
+  BotTextEdit
+    id: removerValue
+    text: 688
+    anchors.right: parent.right
+    anchors.left: parent.left
+    anchors.top: label1.bottom
+    margin-top: 5
+
+  HorizontalSeparator
+    id: separator2
+    anchors.right: parent.right
+    anchors.left: parent.left
+    anchors.bottom: close.top
+    margin-bottom: 5
+
+  Button
+    id: close
+    !text: tr('Cerrar')
+    color: green
+    $hover:
+      color: #ff2a2a
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    size: 20 20
