@@ -69,7 +69,7 @@ local c = {
 	}, -- Item list to pickup, separated by a comma.
 	CheckPOS = 1 -- The SQM from your character to check if theres an item.
 }
-macro(20, "Free Items", "", function()
+macro(20, "Free Items", "0", function()
 	for x = -storage.freeItemsPosCheck, storage.freeItemsPosCheck do
 		for y = -storage.freeItemsPosCheck, storage.freeItemsPosCheck do
 			local tile = g_map.getTile({x = posx() + x, y = posy() + y, z = posz()})
