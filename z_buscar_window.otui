@@ -153,21 +153,21 @@ BuscarPanel < Panel
 
   Label
     id: label13
-    text: Guild:
     anchors.left: parent.left
     anchors.top: separator6.bottom
     margin-top: 3
-    color: #c559ff
+    color: #17928D
     text-align: center
 
   Label
     id: label14
+    text: V.2.0 by Godlike
     width: 200
     anchors.right: parent.right
     anchors.top: separator6.bottom
     margin-top: 3
     margin-left: 5
-    color: #f40c0c
+    color: #17928D
     text-align: right
 
   HorizontalSeparator

@@ -1,19 +1,19 @@
 -- Poni Tests --
 -- local msg = "17:46 You see an exercise rod that has 171 charges left. It weighs 10.00 oz."
 
-UI.Button("Force Logout", function()
-    logout()
-end)
+--UI.Button("Force Logout", function()
+--    logout()
+--end)
 
-addTextEdit("nombrePlayer", storage.nombrePlayer or "Rollback", function(widget, text)
-    storage.nombrePlayer = text
-end)
-UI.Button("Buscar Personaje", function()
-  g_platform.openUrl("https://www.armada-azteca.com/characterprofile.php?name="..storage.nombrePlayer.."")
-end)
-UI.Button("Ver Deathlist", function()
-    say('!deathlist "'..storage.nombrePlayer..'')
-  end)
+--addTextEdit("nombrePlayer", storage.nombrePlayer or "Rollback", function(widget, text)
+--    storage.nombrePlayer = text
+--end)
+--UI.Button("Buscar Personaje", function()
+--  g_platform.openUrl("https://www.armada-azteca.com/characterprofile.php?name="..storage.nombrePlayer.."")
+--end)
+--UI.Button("Ver Deathlist", function()
+--    say('!deathlist "'..storage.nombrePlayer..'')
+ -- end)
 
   UI.Separator()
   UI.Label("Follow Player:")
