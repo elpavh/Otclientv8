@@ -27,6 +27,7 @@ Panel
 if not storage[panelName] then
     storage[panelName] = {
       bot_option = {},
+      saved_values = {},
       useRune = 3151,
       useRuneOption = "Medusa",
       spellName = "exevo mas lux",
@@ -49,10 +50,10 @@ botOptions.setup = function()
   local add = botOptions.add
 
   add("spamRune", "Spam Rune", false, "switchEdit", runeSpam)
-  add("spamSpell", "Spam Spell", false, "switchEdit", nil)
-  add("pausarMonster", "Pausa Monsters", false, "switchEdit", nil)
+  add("spamSpell", "Spam Spell", false, "switchEdit", spellSpam)
+--add("pausarMonster", "Pausa Monsters", false, "switch", nil)
   add("usarTarget", "Usar Targetting", false, "switch", nil)
-  add("usarBoost", "Usar Booster", false, "switchEdit", nil)
+  add("usarBoost", "Usar Booster", false, "switch", nil)
 --   add("pauseMonster", "Pausar en cantidad", "false", "switch", nil)
 --   add("pauseMonster2", "Test2", "false", "switchEdit", nil)
 
@@ -130,10 +131,10 @@ botUI.switch.onClick = function()
 end
 
 botOptions.get = function(id)
-  if storage[panelNamee].saved_values[id] == nil then
+  if storage[panelName].bot_option[id] == nil then
     return error("The selected ID doesn't exist, id: " .. id)
   end
-  return storage[panelName].saved_values[id]
+  return storage[panelName].bot_option[id]
 end
 
 botOptions.setup()
@@ -168,3 +169,67 @@ spellSpam.removerValue:setText(storage[panelName].spellName)
 spellSpam.removerValue.onTextChange = function(widget, text)
   storage[panelName].spellName = text
 end
+
+
+macro(505, function()
+  if not botOptions.get("spamRune") then return end
+    local players = 0
+    for _, n in ipairs(getSpectators(false)) do
+        if n:isPlayer() and n:getName() ~= name() then
+            players = players + 0
+        end
+    end
+    if players > 0 then
+        return
+    end
+    usewith( storage[panelName].useRune, player) 
+end)
+
+
+macro(100, function() 
+  if not botOptions.get("usarTarget") then return end
+  local battlelist = getSpectators();
+  local closest = 10
+  local lowesthpc = 101
+  for key, val in pairs(battlelist) do
+    if val:isMonster() then
+      if getDistanceBetween(player:getPosition(), val:getPosition()) <= closest then
+        closest = getDistanceBetween(player:getPosition(), val:getPosition())
+        if val:getHealthPercent() < lowesthpc then
+          lowesthpc = val:getHealthPercent()
+        end
+      end
+    end
+  end
+  for key, val in pairs(battlelist) do
+    if val:isMonster() then
+      if getDistanceBetween(player:getPosition(), val:getPosition()) <= closest then
+        if g_game.getAttackingCreature() ~= val and val:getHealthPercent() <= lowesthpc then 
+          g_game.attack(val)
+          break
+        end
+      end
+    end
+  end
+end)
+
+macro(2000, function()
+ if not botOptions.get("spamSpell") then return end
+ local players = 0
+ for _, n in ipairs(getSpectators(false)) do
+     if n:isPlayer() and n:getName() ~= name() then
+         players = players + 0
+     end
+ end
+ if players > 0 then
+     return
+ end
+ say(storage[panelName].spellName)
+end)
+
+
+macro(25000, function()
+  local boosterId = 17012
+  if not botOptions.get("usarBoost") then return end
+  use(boosterId)
+end)

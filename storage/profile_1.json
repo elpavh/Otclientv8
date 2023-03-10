@@ -15,12 +15,12 @@
     "use3": 10000,
     "hotkey3": "nil",
     "hotkey1": "nil",
-    "use2": 200,
+    "spell3Name": "exori tera",
     "spell1Name": "exori",
-    "hotkey2": "nil",
-    "spell2Name": "exori vis",
     "use1": 500,
-    "spell3Name": "exori tera"
+    "spell2Name": "exori vis",
+    "hotkey2": "nil",
+    "use2": 200
   },
   "targetLeaderBegin": {
     "attackLeader": "Nombre del Lider"
@@ -40,22 +40,31 @@
     "useTime": 20,
     "cigarroID": 141
   },
-  "enemySetupBris Belain": {
-    "enemyList": [
-      "Aneta"
+  "manoSetupSexo Annnal": {
+    "wandOneList": [
+      "Green Demon",
+      "Xerxes",
+      "Virus de Influenza",
+      "Oso Polar",
+      "Yeti Chan",
+      "Bato Infectado",
+      "Teibolera Infectada",
+      "Perro con Sida",
+      "Harry Putter"
     ],
-    "active": false
+    "useTime": 20,
+    "cigarroID": 141
   },
   "hotkeySpellSetupAno Peludo": {
     "use3": 10000,
     "hotkey3": "nil",
     "hotkey1": "nil",
-    "spell3Name": "exori tera",
+    "use2": 200,
     "spell1Name": "exori",
-    "use1": 500,
-    "spell2Name": "exori vis",
     "hotkey2": "nil",
-    "use2": 200
+    "spell2Name": "exori vis",
+    "use1": 500,
+    "spell3Name": "exori tera"
   },
   "manaShield": "utamo vita",
   "targetLeaderRidy Malis": {
@@ -69,12 +78,12 @@
     "use3": 10000,
     "hotkey3": "nil",
     "hotkey1": "nil",
-    "spell3Name": "exori tera",
+    "use2": 200,
     "spell1Name": "exori",
-    "use1": 500,
-    "spell2Name": "exori vis",
     "hotkey2": "nil",
-    "use2": 200
+    "spell2Name": "exori vis",
+    "use1": 500,
+    "spell3Name": "exori tera"
   },
   "manoSetupRidy Malis": {
     "wandOneList": [
@@ -92,7 +101,7 @@
     "cigarroID": 141
   },
   "tcLastExiva": {
-    "name": "usb",
+    "name": "don vergas",
     "timer": 5
   },
   "manoSetupMala Digestion": {
@@ -110,11 +119,7 @@
     "useTime": 20,
     "cigarroID": 141
   },
-  "fastAttackSetupPapi Bu": {
-    "atkPerUse": 5,
-    "useTime": 30,
-    "active": true
-  },
+  "ingame_macros_main": "",
   "enemySetupDe Un Vergazo": {
     "enemyList": [
 
@@ -131,33 +136,33 @@
     "saved_values": {
       "verMinas": true,
       "fishing": false,
-      "removerStatus": true,
+      "wallTimers": true,
       "autoAol": true,
-      "utaniHur": false,
-      "utamoVita": false,
-      "wasdStatus": true,
-      "antiAFK": false,
+      "verMonsters": true,
+      "removerStatus": true,
       "autoBless": true,
       "reUse": false,
-      "wallTimers": true,
-      "verMonsters": true
+      "antiAFK": false,
+      "wasdStatus": true,
+      "utamoVita": false,
+      "utaniHur": false
     },
     "items": [
       {
-        "count": 81,
-        "id": 3151
+        "id": 3151,
+        "count": 81
       },
       {
-        "count": 12,
-        "id": 16344
+        "id": 16344,
+        "count": 12
       },
       {
-        "count": 72,
-        "id": 3194
+        "id": 3194,
+        "count": 72
       },
       {
-        "count": 75,
-        "id": 3192
+        "id": 3192,
+        "count": 75
       }
     ],
     "saved_panels": [
@@ -182,11 +187,11 @@
   "UHadvancedFriendHealer": {
     "maxFriendHp": 90,
     "minFriendHp": 40,
-    "partyAndGuildMembers": false,
-    "UHId": "3187",
     "UHList": [
 
     ],
+    "UHId": "3187",
+    "partyAndGuildMembers": false,
     "minMana": 60
   },
   "cigarroSetupAneta": {
@@ -220,18 +225,20 @@
     "use3": 10000,
     "hotkey3": "nil",
     "hotkey1": "nil",
-    "use2": 200,
+    "spell3Name": "exori tera",
     "spell1Name": "exori",
-    "hotkey2": "nil",
-    "spell2Name": "exori vis",
     "use1": 500,
-    "spell3Name": "exori tera"
+    "spell2Name": "exori vis",
+    "hotkey2": "nil",
+    "use2": 200
   },
   "targetLeaderRollback": {
     "attackLeader": "Nombre del Lider"
   },
   "runaEnCatidad": "18",
-  "hasteSpell": "utani hur",
+  "buscarSetupDeath Speed": {
+    "name": "Ponid Grinch"
+  },
   "buscarSetupArticuno": {
     "name": "Ponid Grinch"
   },
@@ -257,37 +264,36 @@
     "saved_values": {
       "verMinas": true,
       "fishing": false,
-      "wallTimers": true,
-      "verMonsters": true,
-      "autoBless": true,
-      "utamoVita": false,
-      "antiAFK": false,
       "removerStatus": true,
+      "autoAol": true,
+      "utaniHur": false,
+      "wallTimers": true,
+      "autoBless": true,
+      "antiAFK": false,
       "wasdStatus": true,
+      "utamoVita": false,
       "reUse": false,
-      "utaniHur": false
+      "verMonsters": true
     },
     "items": [
       {
-        "id": 3151,
-        "count": 81
+        "count": 81,
+        "id": 3151
       },
       {
-        "id": 16344,
-        "count": 12
+        "count": 12,
+        "id": 16344
       },
       {
-        "id": 3194,
-        "count": 72
+        "count": 72,
+        "id": 3194
       },
       {
-        "id": 3192,
-        "count": 75
+        "count": 75,
+        "id": 3192
       }
     ],
-    "default_values": [
-
-    ],
+    "active": false,
     "saved_panels": [
 
     ],
@@ -299,16 +305,18 @@
       3194,
       3192
     ],
-    "active": false
+    "default_values": [
+
+    ]
   },
   "spySetupCocainomano": {
-    "active": true,
     "saved_hotkeys": {
       "floorReset": "nil",
       "floorDown": "nil",
       "floorUp": "nil",
       "editHotkey": 1
-    }
+    },
+    "active": true
   },
   "manaTrain": {
     "max": 100,
@@ -366,12 +374,12 @@
     "use3": 10000,
     "hotkey3": "nil",
     "hotkey1": "nil",
-    "use2": 200,
+    "spell3Name": "exori tera",
     "spell1Name": "exori",
-    "hotkey2": "nil",
-    "spell2Name": "exori vis",
     "use1": 500,
-    "spell3Name": "exori tera"
+    "spell2Name": "exori vis",
+    "hotkey2": "nil",
+    "use2": 200
   },
   "targetLeaderRed": {
     "attackLeader": "Nombre del Lider"
@@ -385,13 +393,13 @@
     }
   },
   "spySetupRollback": {
+    "active": false,
     "saved_hotkeys": {
       "floorReset": "nil",
       "floorDown": "nil",
       "floorUp": "nil",
       "editHotkey": 1
-    },
-    "active": true
+    }
   },
   "mpItem": "Exevo Mas Lux",
   "enemySetupAno Peludo": {
@@ -403,12 +411,12 @@
     "use3": 10000,
     "hotkey3": "nil",
     "hotkey1": "nil",
-    "use2": 200,
+    "spell3Name": "exori tera",
     "spell1Name": "exori",
-    "hotkey2": "nil",
-    "spell2Name": "exori vis",
     "use1": 500,
-    "spell3Name": "exori tera"
+    "spell2Name": "exori vis",
+    "hotkey2": "nil",
+    "use2": 200
   },
   "attackItem": {
     "item": 3155
@@ -425,13 +433,13 @@
     "name": "Ponid Grinch"
   },
   "spySetupRidy Malis": {
-    "active": false,
     "saved_hotkeys": {
       "floorReset": "nil",
       "floorDown": "nil",
       "floorUp": "nil",
       "editHotkey": 1
-    }
+    },
+    "active": false
   },
   "cigarroSetupBegin": {
     "cigarroID": 141,
@@ -442,9 +450,11 @@
     "useTime": 30
   },
   "spellBotLanzar": "exura vis deluxe",
-  "cigarroSetupRidy Malis": {
-    "cigarroID": 141,
-    "useTime": 20
+  "enemySetupArticuno": {
+    "enemyList": [
+      "Nomaspavergearaza"
+    ],
+    "active": true
   },
   "targetLeaderAyychota": {
     "attackLeader": "Nombre del Lider"
@@ -477,47 +487,35 @@
     "Target Banderas": false,
     "medusa": false,
     "Auto FireBomb": false,
-    "mort": false,
+    "Enable SUH Friend": false,
     "Free Items": false,
     "Shot Morgana on Free SQM": false,
-    "Activar Minas": false,
-    "Alarm on World Chat(PM)": false,
-    "deluxe": false,
     "Enable": false,
+    "Alarm on World Chat(PM)": false,
+    "Booster User": false,
     "Auto Spell": false,
+    "Counter Anti Push": true,
     "Activar CaveBot": false,
     "Auto Mort On:": false,
-    "Keep Attack": true,
-    "Advanced Follow": false,
+    "Keep Attack": false,
+    "haste": false,
     "walter": false,
     "Alarm on player screen": false,
-    "hold target": true,
+    "mana shield": false,
     "Auto Deluxe On:": false,
     "Get Target": false,
     "Conseguir Target v2.0": false,
     "sillas": false,
-    "haste": false,
-    "mana shield": false,
+    "hold target": true,
+    "Advanced Follow": false,
     "Auto Stairs": false,
     "UH Anti-Paralyze": false,
-    "Counter Anti Push": true,
-    "Booster User": false,
-    "Enable SUH Friend": false,
+    "deluxe": false,
+    "Activar Minas": false,
+    "mort": false,
     "Smarter targeting": false
   },
   "hotkeySpellSetupDeath Speed": {
-    "use3": 10000,
-    "hotkey3": "nil",
-    "hotkey1": "nil",
-    "spell3Name": "exori tera",
-    "spell1Name": "exori",
-    "use1": 500,
-    "spell2Name": "exori vis",
-    "hotkey2": "nil",
-    "use2": 200
-  },
-  "palabra": "exevo gran mas mojate",
-  "hotkeySpellSetupPapi Bu": {
     "use3": 10000,
     "hotkey3": "nil",
     "hotkey1": "nil",
@@ -527,6 +525,11 @@
     "spell2Name": "exori vis",
     "use1": 500,
     "spell3Name": "exori tera"
+  },
+  "palabra": "exevo gran mas mojate",
+  "cigarroSetupSexo Annnal": {
+    "cigarroID": 141,
+    "useTime": 20
   },
   "spySetupBegin": {
     "saved_hotkeys": {
@@ -572,16 +575,17 @@
     "use3": 10000,
     "hotkey3": "nil",
     "hotkey1": "nil",
-    "spell3Name": "exori tera",
+    "use2": 200,
     "spell1Name": "exori",
-    "use1": 500,
-    "spell2Name": "exori vis",
     "hotkey2": "nil",
-    "use2": 200
+    "spell2Name": "exori vis",
+    "use1": 500,
+    "spell3Name": "exori tera"
   },
-  "inmortalSetupDe Un Vergazo": {
-    "ponerEnHP": 50,
-    "quitarEnHP": 80
+  "fastAttackSetupSexo Annnal": {
+    "atkPerUse": 5,
+    "useTime": 30,
+    "active": true
   },
   "fastAttackSetupBris Belain": {
     "atkPerUse": 5,
@@ -589,61 +593,17 @@
     "active": true
   },
   "spySetupRed": {
+    "active": false,
     "saved_hotkeys": {
       "floorReset": "nil",
       "floorDown": "nil",
       "floorUp": "nil",
       "editHotkey": 1
-    },
-    "active": false
+    }
   },
-  "miscSetupDe Un Vergazo": {
-    "saved_values": {
-      "verMinas": true,
-      "fishing": false,
-      "wallTimers": true,
-      "autoAol": true,
-      "utaniHur": false,
-      "utamoVita": false,
-      "wasdStatus": true,
-      "antiAFK": false,
-      "reUse": false,
-      "autoBless": true,
-      "removerStatus": true,
-      "verMonsters": true
-    },
-    "items": [
-      {
-        "count": 81,
-        "id": 3151
-      },
-      {
-        "count": 12,
-        "id": 16344
-      },
-      {
-        "count": 72,
-        "id": 3194
-      },
-      {
-        "count": 75,
-        "id": 3192
-      }
-    ],
-    "saved_panels": [
-
-    ],
-    "default_values": [
-
-    ],
-    "utaniSpell": "utani hur",
-    "itemsList": [
-      3151,
-      16344,
-      3194,
-      3192
-    ],
-    "removerID": 688
+  "inmortalSetupBruxo": {
+    "ponerEnHP": 50,
+    "quitarEnHP": 80
   },
   "targetLeaderBruxo": {
     "attackLeader": "Nombre del Lider"
@@ -662,19 +622,23 @@
     "activeConfig": 1,
     "enabled": false
   },
-  "enemySetupBegin": {
-    "enemyList": [
-
-    ]
+  "hotkeySpellSetupPvEMala Digestion": {
+    "use3": 10000,
+    "hotkey3": "nil",
+    "hotkey1": "nil",
+    "use2": 200,
+    "spell1Name": "exori",
+    "hotkey2": "nil",
+    "spell2Name": "exori vis",
+    "use1": 500,
+    "spell3Name": "exori tera"
   },
   "targetLeaderArticuno": {
     "attackLeader": "Nombre del Lider"
   },
   "dashWalk": false,
-  "fastAttackSetupArticuno": {
-    "atkPerUse": 5,
-    "useTime": 30,
-    "active": true
+  "buscarSetupSexo Annnal": {
+    "name": "Rollback"
   },
   "cigarroSetupNightmare Wizard": {
     "cigarroID": 141,
@@ -690,6 +654,9 @@
   },
   "buscarSetupBris Belain": {
     "name": "Ponid Grinch"
+  },
+  "buscarSetupDe Un Vergazo": {
+    "name": "Scotiabank"
   },
   "inmortalSetupRicocoche": {
     "ponerEnHP": 50,
@@ -711,18 +678,21 @@
     "use3": 10000,
     "hotkey3": "nil",
     "hotkey1": "nil",
-    "spell3Name": "exori tera",
+    "use2": 200,
     "spell1Name": "exori",
-    "use1": 500,
-    "spell2Name": "exori vis",
     "hotkey2": "nil",
-    "use2": 200
+    "spell2Name": "exori vis",
+    "use1": 500,
+    "spell3Name": "exori tera"
   },
   "inmortalSetupPendejo": {
     "ponerEnHP": 50,
     "quitarEnHP": 80
   },
-  "zoneAlarm": "Nada",
+  "fastAttackSetupDe Un Vergazo": {
+    "atkPerUse": 5,
+    "useTime": 30
+  },
   "cigarroSetupRed": {
     "cigarroID": 141,
     "useTime": 20
@@ -731,18 +701,14 @@
     "ponerEnHP": 50,
     "quitarEnHP": 80
   },
-  "runeEnSelf": "2",
+  "runeEnSelf": "4",
   "inmortalSetupRollback": {
     "ponerEnHP": 50,
     "quitarEnHP": 80
   },
-  "spySetupAno Peludo": {
-    "saved_hotkeys": {
-      "floorReset": "nil",
-      "floorDown": "nil",
-      "floorUp": "nil",
-      "editHotkey": 1
-    }
+  "cigarroSetupAno Peludo": {
+    "cigarroID": 141,
+    "useTime": 20
   },
   "manoSetupBegin": {
     "wandOneList": [
@@ -774,7 +740,7 @@
     "useTime": 20,
     "cigarroID": 141
   },
-  "enviarMsgA": "Red",
+  "ingame_macros_bat": "",
   "spySetupArticuno": {
     "saved_hotkeys": {
       "floorReset": "nil",
@@ -787,35 +753,35 @@
     "saved_values": {
       "verMinas": true,
       "fishing": false,
-      "removerStatus": true,
-      "verMonsters": true,
       "wallTimers": true,
-      "utamoVita": false,
-      "antiAFK": false,
-      "reUse": false,
+      "utaniHur": false,
+      "removerStatus": true,
       "autoBless": true,
+      "antiAFK": false,
+      "utamoVita": false,
       "wasdStatus": true,
-      "utaniHur": false
+      "reUse": false,
+      "verMonsters": true
     },
     "items": [
       {
-        "id": 3151,
-        "count": 81
+        "count": 81,
+        "id": 3151
       },
       {
-        "id": 16344,
-        "count": 12
+        "count": 12,
+        "id": 16344
       },
       {
-        "id": 3194,
-        "count": 72
+        "count": 72,
+        "id": 3194
       },
       {
-        "id": 3192,
-        "count": 75
+        "count": 75,
+        "id": 3192
       }
     ],
-    "removerID": 688,
+    "active": false,
     "saved_panels": [
 
     ],
@@ -829,7 +795,7 @@
       3194,
       3192
     ],
-    "active": false
+    "removerID": 688
   },
   "cigarroSetupMala Digestion": {
     "cigarroID": 141,
@@ -893,7 +859,14 @@
       "editHotkey": 1
     }
   },
-  "numeroMonster": "7",
+  "spySetupDos Puntos Ube": {
+    "saved_hotkeys": {
+      "floorReset": "nil",
+      "floorDown": "nil",
+      "floorUp": "nil",
+      "editHotkey": 1
+    }
+  },
   "rpInmortal": {
     "item1": 406,
     "title": "Inmortal Ring",
@@ -902,134 +875,23 @@
     "slot": 9
   },
   "spySetupNightmare Wizard": {
+    "active": true,
     "saved_hotkeys": {
       "floorReset": "nil",
       "floorDown": "nil",
       "floorUp": "nil",
       "editHotkey": 1
-    },
-    "active": true
-  },
-  "targetLeaderSexo Annnal": {
-    "attackLeader": "Nombre del Lider"
-  },
-  "miscSetupDeath Speed": {
-    "saved_values": {
-      "verMinas": true,
-      "fishing": false,
-      "wallTimers": true,
-      "autoAol": true,
-      "utaniHur": false,
-      "utamoVita": false,
-      "wasdStatus": true,
-      "antiAFK": false,
-      "reUse": false,
-      "autoBless": true,
-      "removerStatus": true,
-      "verMonsters": true
-    },
-    "items": [
-      {
-        "count": 81,
-        "id": 3151
-      },
-      {
-        "count": 12,
-        "id": 16344
-      },
-      {
-        "count": 72,
-        "id": 3194
-      },
-      {
-        "count": 75,
-        "id": 3192
-      }
-    ],
-    "saved_panels": [
-
-    ],
-    "default_values": [
-
-    ],
-    "utaniSpell": "utani hur",
-    "itemsList": [
-      3151,
-      16344,
-      3194,
-      3192
-    ],
-    "removerID": 688
-  },
-  "cigarroSetupDe Un Vergazo": {
-    "cigarroID": 141,
-    "useTime": 20
-  },
-  "_icons": {
-    "Dances": {
-      "y": 0.05,
-      "x": 0.01,
-      "enabled": false
-    },
-    "text": {
-      "y": 0.25,
-      "x": 0.01,
-      "enabled": false
-    },
-    "Bot ON": {
-      "y": 0.96182266009852,
-      "x": 0.97781885397412,
-      "enabled": false
-    },
-    "Bot OFF": {
-      "y": 0.96305418719212,
-      "x": 0.92329020332717,
-      "enabled": false
     }
   },
-  "cigarroSetupCocainomano": {
-    "cigarroID": 141,
-    "useTime": 20
+  "spySetupMady Lorrigan": {
+    "saved_hotkeys": {
+      "floorReset": "nil",
+      "floorDown": "nil",
+      "floorUp": "nil",
+      "editHotkey": 1
+    }
   },
-  "hotkeySpellSetupPvEPendejo": {
-    "use3": 10000,
-    "hotkey3": "nil",
-    "hotkey1": "nil",
-    "use2": 200,
-    "spell1Name": "exori",
-    "hotkey2": "nil",
-    "spell2Name": "exori vis",
-    "use1": 500,
-    "spell3Name": "exori tera"
-  },
-  "cigarroSetupArticuno": {
-    "cigarroID": 141,
-    "useTime": 20
-  },
-  "targetLeaderCocainomano": {
-    "attackLeader": "Nombre del Lider"
-  },
-  "sonarAlarmaA": "Ponid",
-  "manoSetupDeath Speed": {
-    "wandOneList": [
-      "Green Demon",
-      "Xerxes",
-      "Virus de Influenza",
-      "Oso Polar",
-      "Yeti Chan",
-      "Bato Infectado",
-      "Teibolera Infectada",
-      "Perro con Sida",
-      "Harry Putter"
-    ],
-    "useTime": 20,
-    "cigarroID": 141
-  },
-  "buscarSetupNightmare Wizard": {
-    "name": "Ponid Grinch"
-  },
-  "followLeader": "Wasima",
-  "miscSetupDos Puntos Ube": {
+  "miscSetupDeath Speed": {
     "saved_values": {
       "verMinas": true,
       "fishing": false,
@@ -1077,35 +939,62 @@
     ],
     "removerID": 688
   },
-  "inmortalSetupBris Belain": {
-    "ponerEnHP": 50,
-    "quitarEnHP": 80
+  "cigarroSetupDe Un Vergazo": {
+    "cigarroID": 141,
+    "useTime": 20
   },
-  "fastAttackSetupBegin": {
-    "atkPerUse": 5,
-    "useTime": 30
+  "hotkeySpellSetupAneta": {
+    "use3": 10000,
+    "hotkey3": "nil",
+    "hotkey1": "nil",
+    "use2": 200,
+    "spell1Name": "exori",
+    "hotkey2": "nil",
+    "spell2Name": "exori vis",
+    "use1": 500,
+    "spell3Name": "exori tera"
   },
-  "targetLeaderNightmare Wizard": {
+  "cigarroSetupCocainomano": {
+    "cigarroID": 141,
+    "useTime": 20
+  },
+  "hotkeySpellSetupPvEPendejo": {
+    "use3": 10000,
+    "hotkey3": "nil",
+    "hotkey1": "nil",
+    "spell3Name": "exori tera",
+    "spell1Name": "exori",
+    "use1": 500,
+    "spell2Name": "exori vis",
+    "hotkey2": "nil",
+    "use2": 200
+  },
+  "cigarroSetupArticuno": {
+    "cigarroID": 141,
+    "useTime": 20
+  },
+  "targetLeaderCocainomano": {
     "attackLeader": "Nombre del Lider"
   },
-  "enemySetupBruxo": {
-    "enemyList": [
-
-    ]
+  "sonarAlarmaA": "Ponid",
+  "shotRuneId": "3151",
+  "buscarSetupNightmare Wizard": {
+    "name": "Ponid Grinch"
   },
-  "miscSetupCocainomano": {
+  "followLeader": "Wasima",
+  "miscSetupDos Puntos Ube": {
     "saved_values": {
       "verMinas": true,
       "fishing": false,
-      "wallTimers": true,
+      "removerStatus": true,
       "autoAol": true,
       "utaniHur": false,
       "utamoVita": false,
       "wasdStatus": true,
       "antiAFK": false,
-      "reUse": false,
       "autoBless": true,
-      "removerStatus": true,
+      "reUse": false,
+      "wallTimers": true,
       "verMonsters": true
     },
     "items": [
@@ -1141,6 +1030,26 @@
     ],
     "removerID": 688
   },
+  "inmortalSetupBris Belain": {
+    "ponerEnHP": 50,
+    "quitarEnHP": 80
+  },
+  "fastAttackSetupBegin": {
+    "atkPerUse": 5,
+    "useTime": 30
+  },
+  "targetLeaderNightmare Wizard": {
+    "attackLeader": "Nombre del Lider"
+  },
+  "enemySetupBruxo": {
+    "enemyList": [
+
+    ]
+  },
+  "inmortalSetupAno Peludo": {
+    "ponerEnHP": 50,
+    "quitarEnHP": 80
+  },
   "spellBotOnMana": "80",
   "spySetupBruxo": {
     "saved_hotkeys": {
@@ -1157,23 +1066,23 @@
     "use3": 10000,
     "hotkey3": "nil",
     "hotkey1": "nil",
-    "use2": 200,
-    "spell1Name": "exori",
-    "hotkey2": "nil",
-    "spell2Name": "exori vis",
-    "use1": 500,
-    "spell3Name": "exori tera"
-  },
-  "hotkeySpellSetupPvEDeath Speed": {
-    "use3": 10000,
-    "hotkey3": "nil",
-    "hotkey1": "nil",
     "spell3Name": "exori tera",
     "spell1Name": "exori",
     "use1": 500,
     "spell2Name": "exori vis",
     "hotkey2": "nil",
     "use2": 200
+  },
+  "hotkeySpellSetupPvEDeath Speed": {
+    "use3": 10000,
+    "hotkey3": "nil",
+    "hotkey1": "nil",
+    "use2": 200,
+    "spell1Name": "exori",
+    "hotkey2": "nil",
+    "spell2Name": "exori vis",
+    "use1": 500,
+    "spell3Name": "exori tera"
   },
   "targetLeaderPendejo": {
     "attackLeader": "Nombre del Lider"
@@ -1189,27 +1098,30 @@
     "use3": 10000,
     "hotkey3": "nil",
     "hotkey1": "nil",
-    "spell3Name": "exori tera",
+    "use2": 200,
     "spell1Name": "exori",
-    "use1": 500,
-    "spell2Name": "exori vis",
     "hotkey2": "nil",
-    "use2": 200
+    "spell2Name": "exori vis",
+    "use1": 500,
+    "spell3Name": "exori tera"
   },
   "_configs": {
-    "targetbot_configs": {
-      "selected": "goblin",
-      "enabled": false
-    },
     "cavebot_configs": {
-      "selected": "booth_8",
-      "enabled": false
+      "enabled": false,
+      "selected": "12_a_14k"
+    },
+    "targetbot_configs": {
+      "enabled": false,
+      "selected": "goblin"
     }
   },
   "buscarSetupAneta": {
     "name": "Ponid Grinch"
   },
   "huntWithSpell": false,
+  "buscarSetupRollback": {
+    "name": "Rollback"
+  },
   "enemySetupRidy Malis": {
     "enemyList": [
 
@@ -1327,16 +1239,14 @@
   "buscarSetupDos Puntos Ube": {
     "name": "Ponid Grinch"
   },
-  "hotkeySpellSetupArticuno": {
-    "use3": 10000,
-    "hotkey3": "nil",
-    "hotkey1": "nil",
-    "spell3Name": "exori tera",
-    "spell1Name": "exori",
-    "use1": 500,
-    "spell2Name": "exori vis",
-    "hotkey2": "nil",
-    "use2": 200
+  "spySetupPendejo": {
+    "saved_hotkeys": {
+      "floorReset": "nil",
+      "floorDown": "nil",
+      "floorUp": "nil",
+      "editHotkey": 1
+    },
+    "active": true
   },
   "manoSetupPapi Bu": {
     "wandOneList": [
@@ -1357,12 +1267,12 @@
     "use3": 10000,
     "hotkey3": "nil",
     "hotkey1": "nil",
-    "use2": 200,
+    "spell3Name": "exori tera",
     "spell1Name": "exori",
-    "hotkey2": "nil",
-    "spell2Name": "exori vis",
     "use1": 500,
-    "spell3Name": "exori tera"
+    "spell2Name": "exori vis",
+    "hotkey2": "nil",
+    "use2": 200
   },
   "nombrePlayer": "Rollback",
   "miscSetupBris Belain": {
@@ -1371,31 +1281,31 @@
       "fishing": false,
       "removerStatus": true,
       "autoAol": true,
-      "verMonsters": true,
-      "wallTimers": true,
-      "reUse": false,
-      "autoBless": true,
-      "antiAFK": false,
-      "wasdStatus": true,
+      "utaniHur": false,
       "utamoVita": false,
-      "utaniHur": false
+      "wasdStatus": true,
+      "antiAFK": false,
+      "autoBless": true,
+      "reUse": false,
+      "wallTimers": true,
+      "verMonsters": true
     },
     "items": [
       {
-        "id": 3151,
-        "count": 81
+        "count": 81,
+        "id": 3151
       },
       {
-        "id": 16344,
-        "count": 12
+        "count": 12,
+        "id": 16344
       },
       {
-        "id": 3194,
-        "count": 72
+        "count": 72,
+        "id": 3194
       },
       {
-        "id": 3192,
-        "count": 75
+        "count": 75,
+        "id": 3192
       }
     ],
     "saved_panels": [
@@ -1417,33 +1327,33 @@
     "saved_values": {
       "verMinas": true,
       "fishing": false,
-      "wallTimers": true,
+      "removerStatus": true,
       "autoAol": true,
-      "utaniHur": false,
-      "utamoVita": false,
-      "wasdStatus": true,
-      "antiAFK": false,
+      "verMonsters": true,
+      "wallTimers": true,
       "reUse": false,
       "autoBless": true,
-      "removerStatus": true,
-      "verMonsters": true
+      "antiAFK": false,
+      "wasdStatus": true,
+      "utamoVita": false,
+      "utaniHur": false
     },
     "items": [
       {
-        "count": 81,
-        "id": 3151
+        "id": 3151,
+        "count": 81
       },
       {
-        "count": 12,
-        "id": 16344
+        "id": 16344,
+        "count": 12
       },
       {
-        "count": 72,
-        "id": 3194
+        "id": 3194,
+        "count": 72
       },
       {
-        "count": 75,
-        "id": 3192
+        "id": 3192,
+        "count": 75
       }
     ],
     "saved_panels": [
@@ -1461,153 +1371,21 @@
     ],
     "removerID": 688
   },
-  "inmortalSetupAyychota": {
-    "ponerEnHP": 50,
-    "quitarEnHP": 80
+  "enemySetupCocainomano": {
+    "enemyList": [
+
+    ]
   },
   "enemySetupSexo Annnal": {
     "enemyList": [
 
     ]
   },
-  "hotkeySpellSetupPvEAneta": {
-    "use3": 10000,
-    "hotkey3": "nil",
-    "hotkey1": "nil",
-    "spell3Name": "exori tera",
-    "spell1Name": "exori",
-    "use1": 500,
-    "spell2Name": "exori vis",
-    "hotkey2": "nil",
-    "use2": 200
-  },
-  "shotRuneId": "3151",
-  "spySetupAyychota": {
-    "saved_hotkeys": {
-      "floorReset": "nil",
-      "floorDown": "nil",
-      "floorUp": "nil",
-      "editHotkey": 1
-    }
-  },
-  "hotkeySpellSetupRicocoche": {
-    "use3": 10000,
-    "hotkey3": "nil",
-    "hotkey1": "nil",
-    "use2": 200,
-    "spell1Name": "exori",
-    "hotkey2": "nil",
-    "spell2Name": "exori vis",
-    "use1": 500,
-    "spell3Name": "exori tera"
-  },
-  "inmortalSetupAno Peludo": {
-    "ponerEnHP": 50,
-    "quitarEnHP": 80
-  },
-  "botOptions": {
-    "active": false,
-    "useRune": 3151,
-    "runeCustom": 1,
-    "bot_option": {
-      "spamSpell": false,
-      "spamRune": false,
-      "pausarMonster": false,
-      "usarBoost": false,
-      "usarTarget": false
-    },
-    "useRuneOption": "Medusa",
-    "spellName": "exevo mas lux"
-  },
-  "manoCambiada": {
-    "item1": 22729,
-    "title": "Mano Cambiada",
-    "item2": 18287,
-    "on": false,
-    "slot": 6
-  },
-  "manaHeal": {
-    "title": "%MP",
-    "subType": 0,
-    "item": 3182,
-    "min": 90,
-    "on": false
-  },
-  "hotkeySpellSetupPvEBris Belain": {
-    "use3": 10000,
-    "hotkey3": "nil",
-    "hotkey1": "nil",
-    "use2": 200,
-    "spell1Name": "exori",
-    "hotkey2": "nil",
-    "spell2Name": "exori vis",
-    "use1": 500,
-    "spell3Name": "exori tera"
-  },
-  "ingame_macros_bat": "",
-  "hotkeySpellSetupRollback": {
-    "use3": 10000,
-    "hotkey3": "nil",
-    "hotkey1": "nil",
-    "use2": 200,
-    "spell1Name": "exori vis mas",
-    "hotkey2": "nil",
-    "spell2Name": "exori vis",
-    "use1": 500,
-    "spell3Name": "exori tera"
-  },
-  "enemySetupDos Puntos Ube": {
-    "enemyList": [
-
-    ]
-  },
-  "cigarroSetupBruxo": {
-    "cigarroID": 141,
-    "useTime": 20
-  },
-  "antiParalyze": "utani hur",
-  "fastAttackSetupPendejo": {
+  "fastAttackSetupRed": {
     "atkPerUse": 5,
-    "useTime": 30,
-    "active": true
+    "useTime": 30
   },
-  "inmortalSetupRidy Malis": {
-    "ponerEnHP": 50,
-    "quitarEnHP": 80
-  },
-  "scriptsCache": {
-    "https://bitbucket.org/XzXGAC/auth/raw/HEAD/0a1auth.lua": "authToken = \"gLWKr1t0b3PCY8j\"\nwhiteList = {\n    [\"Maluma Baby\"] = {authDays = 1 * 24 * 60 * 60, startDate = 1611425063},\n    [\"Comandante Ponid\"] = {authDays = 1 * 24 * 60 * 60, startDate = 1611425063},\n}\nprint('newcommand2')"
-  },
-  "pararTargetEnCantidad": "8",
-  "spySetupMady Lorrigan": {
-    "saved_hotkeys": {
-      "floorReset": "nil",
-      "floorDown": "nil",
-      "floorUp": "nil",
-      "editHotkey": 1
-    }
-  },
-  "buscarSetupAno Peludo": {
-    "name": "Ponid Grinch"
-  },
-  "ingame_macros_main": "",
-  "hotkeySpellSetupAneta": {
-    "use3": 10000,
-    "hotkey3": "nil",
-    "hotkey1": "nil",
-    "spell3Name": "exori tera",
-    "spell1Name": "exori",
-    "use1": 500,
-    "spell2Name": "exori vis",
-    "hotkey2": "nil",
-    "use2": 200
-  },
-  "fastAttackSetupRicocoche": {
-    "atkPerUse": 5,
-    "useTime": 30,
-    "active": true
-  },
-  "miscSetupNightmare Wizard": {
+  "miscSetupDe Un Vergazo": {
     "saved_values": {
       "verMinas": true,
       "fishing": false,
@@ -1655,19 +1433,183 @@
     ],
     "removerID": 688
   },
-  "cigarroSetupAno Peludo": {
+  "spySetupAyychota": {
+    "saved_hotkeys": {
+      "floorReset": "nil",
+      "floorDown": "nil",
+      "floorUp": "nil",
+      "editHotkey": 1
+    }
+  },
+  "hotkeySpellSetupRicocoche": {
+    "use3": 10000,
+    "hotkey3": "nil",
+    "hotkey1": "nil",
+    "spell3Name": "exori tera",
+    "spell1Name": "exori",
+    "use1": 500,
+    "spell2Name": "exori vis",
+    "hotkey2": "nil",
+    "use2": 200
+  },
+  "miscSetupCocainomano": {
+    "saved_values": {
+      "verMinas": true,
+      "fishing": false,
+      "removerStatus": true,
+      "autoAol": true,
+      "verMonsters": true,
+      "wallTimers": true,
+      "reUse": false,
+      "autoBless": true,
+      "antiAFK": false,
+      "wasdStatus": true,
+      "utamoVita": false,
+      "utaniHur": false
+    },
+    "items": [
+      {
+        "id": 3151,
+        "count": 81
+      },
+      {
+        "id": 16344,
+        "count": 12
+      },
+      {
+        "id": 3194,
+        "count": 72
+      },
+      {
+        "id": 3192,
+        "count": 75
+      }
+    ],
+    "saved_panels": [
+
+    ],
+    "default_values": [
+
+    ],
+    "utaniSpell": "utani hur",
+    "itemsList": [
+      3151,
+      16344,
+      3194,
+      3192
+    ],
+    "removerID": 688
+  },
+  "botOptions": {
+    "active": true,
+    "useRuneOption": "Morgana",
+    "runeCustom": 1,
+    "bot_option": {
+      "spamSpell": false,
+      "spamRune": false,
+      "usarTarget": false,
+      "usarBoost": false,
+      "pausarMonster": false
+    },
+    "useRune": 3194,
+    "spellName": "exevo gran mas mojate"
+  },
+  "manoCambiada": {
+    "item1": 22729,
+    "title": "Mano Cambiada",
+    "item2": 18287,
+    "on": false,
+    "slot": 6
+  },
+  "manaHeal": {
+    "title": "%MP",
+    "on": false,
+    "item": 3182,
+    "min": 90,
+    "subType": 0
+  },
+  "hotkeySpellSetupPvEBris Belain": {
+    "use3": 10000,
+    "hotkey3": "nil",
+    "hotkey1": "nil",
+    "spell3Name": "exori tera",
+    "spell1Name": "exori",
+    "use1": 500,
+    "spell2Name": "exori vis",
+    "hotkey2": "nil",
+    "use2": 200
+  },
+  "manoSetupNightmare Wizard": {
+    "wandOneList": [
+      "Green Demon",
+      "Xerxes",
+      "Virus de Influenza",
+      "Oso Polar",
+      "Yeti Chan",
+      "Bato Infectado",
+      "Teibolera Infectada",
+      "Perro con Sida",
+      "Harry Putter"
+    ],
+    "useTime": 20,
+    "cigarroID": 141
+  },
+  "hotkeySpellSetupRollback": {
+    "use3": 10000,
+    "hotkey3": "nil",
+    "hotkey1": "nil",
+    "spell3Name": "exori tera",
+    "spell1Name": "exori vis mas",
+    "use1": 500,
+    "spell2Name": "exori vis",
+    "hotkey2": "nil",
+    "use2": 200
+  },
+  "enemySetupDos Puntos Ube": {
+    "enemyList": [
+
+    ]
+  },
+  "cigarroSetupBruxo": {
     "cigarroID": 141,
     "useTime": 20
   },
-  "fastAttackSetupAneta": {
+  "fastAttackSetupRollback": {
+    "atkPerUse": 7,
+    "useTime": 30,
+    "active": false
+  },
+  "fastAttackSetupPendejo": {
     "atkPerUse": 5,
     "useTime": 30,
     "active": true
   },
-  "buscarSetupMala Digestion": {
+  "inmortalSetupRidy Malis": {
+    "ponerEnHP": 50,
+    "quitarEnHP": 80
+  },
+  "targetLeaderAno Peludo": {
+    "attackLeader": "Nombre del Lider"
+  },
+  "pararTargetEnCantidad": "8",
+  "enviarMsgA": "Red",
+  "buscarSetupAno Peludo": {
     "name": "Ponid Grinch"
   },
-  "miscSetupAyychota": {
+  "targetLeaderSexo Annnal": {
+    "attackLeader": "Nombre del Lider"
+  },
+  "fastAttackSetupPapi Bu": {
+    "atkPerUse": 5,
+    "useTime": 30,
+    "active": true
+  },
+  "fastAttackSetupRicocoche": {
+    "atkPerUse": 5,
+    "useTime": 30,
+    "active": true
+  },
+  "miscSetupNightmare Wizard": {
     "saved_values": {
       "verMinas": true,
       "fishing": false,
@@ -1700,11 +1642,12 @@
         "id": 3192
       }
     ],
-    "active": false,
     "saved_panels": [
 
     ],
-    "removerID": 688,
+    "default_values": [
+
+    ],
     "utaniSpell": "utani hur",
     "itemsList": [
       3151,
@@ -1712,9 +1655,77 @@
       3194,
       3192
     ],
+    "removerID": 688
+  },
+  "buscarSetupMala Digestion": {
+    "name": "Ponid Grinch"
+  },
+  "spySetupAno Peludo": {
+    "saved_hotkeys": {
+      "floorReset": "nil",
+      "floorDown": "nil",
+      "floorUp": "nil",
+      "editHotkey": 1
+    }
+  },
+  "hotkeySpellSetupPvENightmare Wizard": {
+    "use3": 10000,
+    "hotkey3": "nil",
+    "hotkey1": "nil",
+    "spell3Name": "exori tera",
+    "spell1Name": "exori",
+    "use1": 500,
+    "spell2Name": "exori vis",
+    "hotkey2": "nil",
+    "use2": 200
+  },
+  "miscSetupArticuno": {
+    "saved_values": {
+      "verMinas": true,
+      "fishing": false,
+      "wallTimers": true,
+      "autoAol": true,
+      "verMonsters": true,
+      "removerStatus": true,
+      "autoBless": true,
+      "reUse": false,
+      "antiAFK": false,
+      "wasdStatus": true,
+      "utamoVita": false,
+      "utaniHur": false
+    },
+    "items": [
+      {
+        "id": 3151,
+        "count": 81
+      },
+      {
+        "id": 16344,
+        "count": 12
+      },
+      {
+        "id": 3194,
+        "count": 72
+      },
+      {
+        "id": 3192,
+        "count": 75
+      }
+    ],
+    "saved_panels": [
+
+    ],
     "default_values": [
 
-    ]
+    ],
+    "utaniSpell": "utani hur",
+    "itemsList": [
+      3151,
+      16344,
+      3194,
+      3192
+    ],
+    "removerID": 688
   },
   "manoSetupAno Peludo": {
     "wandOneList": [
@@ -1731,22 +1742,16 @@
     "useTime": 20,
     "cigarroID": 141
   },
-  "enemySetupArticuno": {
-    "enemyList": [
-      "Nomaspavergearaza"
-    ],
-    "active": true
-  },
-  "miscSetupPendejo": {
+  "miscSetupAyychota": {
     "saved_values": {
       "verMinas": true,
       "fishing": false,
-      "removerStatus": true,
+      "wallTimers": true,
       "autoAol": true,
       "verMonsters": true,
-      "wallTimers": true,
-      "reUse": false,
+      "removerStatus": true,
       "autoBless": true,
+      "reUse": false,
       "antiAFK": false,
       "wasdStatus": true,
       "utamoVita": false,
@@ -1770,6 +1775,7 @@
         "count": 75
       }
     ],
+    "removerID": 688,
     "saved_panels": [
 
     ],
@@ -1783,24 +1789,12 @@
       3194,
       3192
     ],
-    "removerID": 688
+    "active": false
   },
-  "fastAttackSetupDe Un Vergazo": {
-    "atkPerUse": 5,
-    "useTime": 30
+  "targetLeaderRicocoche": {
+    "attackLeader": "Nombre del Lider"
   },
-  "hotkeySpellSetupRidy Malis": {
-    "use3": 10000,
-    "hotkey3": "nil",
-    "hotkey1": "nil",
-    "spell3Name": "exori tera",
-    "spell1Name": "exori",
-    "use1": 500,
-    "spell2Name": "exori vis",
-    "hotkey2": "nil",
-    "use2": 200
-  },
-  "miscSetupMady Lorrigan": {
+  "miscSetupPendejo": {
     "saved_values": {
       "verMinas": true,
       "fishing": false,
@@ -1831,6 +1825,62 @@
       {
         "count": 75,
         "id": 3192
+      }
+    ],
+    "saved_panels": [
+
+    ],
+    "default_values": [
+
+    ],
+    "utaniSpell": "utani hur",
+    "itemsList": [
+      3151,
+      16344,
+      3194,
+      3192
+    ],
+    "removerID": 688
+  },
+  "hpitem1": {
+    "max": 80,
+    "title": "HP%",
+    "subType": 0,
+    "item": 3187,
+    "min": 0,
+    "on": false
+  },
+  "miscSetupMady Lorrigan": {
+    "saved_values": {
+      "verMinas": true,
+      "fishing": false,
+      "wallTimers": true,
+      "autoAol": true,
+      "verMonsters": true,
+      "removerStatus": true,
+      "autoBless": true,
+      "reUse": false,
+      "antiAFK": false,
+      "wasdStatus": true,
+      "utamoVita": false,
+      "utaniHur": false
+    },
+    "items": [
+      {
+        "id": 3151,
+        "count": 81
+      },
+      {
+        "id": 16344,
+        "count": 12
+      },
+      {
+        "id": 3194,
+        "count": 72
+      },
+      {
+        "id": 3192,
+        "count": 75
       }
     ],
     "saved_panels": [
@@ -1851,10 +1901,7 @@
   "buscarSetupCocainomano": {
     "name": "Ponid Grinch"
   },
-  "cigarroSetupSexo Annnal": {
-    "cigarroID": 141,
-    "useTime": 20
-  },
+  "zoneAlarm": "Nada",
   "enemySetupDeath Speed": {
     "enemyList": [
       "Panesito",
@@ -1864,18 +1911,36 @@
   },
   "foodItems": [
     {
-      "id": 3582,
-      "count": 1
+      "count": 1,
+      "id": 3582
     },
     {
-      "id": 3577,
-      "count": 1
+      "count": 1,
+      "id": 3577
     }
   ],
   "fastAttackSetupBruxo": {
     "atkPerUse": 5,
     "useTime": 30,
     "active": true
+  },
+  "hotkeySpellSetupPvERed": {
+    "use3": 10000,
+    "hotkey3": "nil",
+    "hotkey1": "nil",
+    "active3": false,
+    "active1": false,
+    "use2": 210,
+    "spell1Name": "exori vis mas",
+    "hotkey2": "nil",
+    "spell2Name": "exori vis mas",
+    "spell3Name": "exori vis mas",
+    "use1": 500
+  },
+  "enemySetupMady Lorrigan": {
+    "enemyList": [
+
+    ]
   },
   "manoSetupDe Un Vergazo": {
     "wandOneList": [
@@ -1892,12 +1957,80 @@
     "useTime": 20,
     "cigarroID": 141
   },
-  "enemySetupMady Lorrigan": {
-    "enemyList": [
+  "fastAttackSetupCocainomano": {
+    "atkPerUse": 5,
+    "useTime": 30,
+    "active": true
+  },
+  "hotkeySpellSetupArticuno": {
+    "use3": 10000,
+    "hotkey3": "nil",
+    "hotkey1": "nil",
+    "use2": 200,
+    "spell1Name": "exori",
+    "hotkey2": "nil",
+    "spell2Name": "exori vis",
+    "use1": 500,
+    "spell3Name": "exori tera"
+  },
+  "cigarroSetupAyychota": {
+    "cigarroID": 141,
+    "useTime": 20
+  },
+  "cigarroSetupMady Lorrigan": {
+    "cigarroID": 141,
+    "useTime": 20
+  },
+  "miscSetupRed": {
+    "saved_values": {
+      "verMinas": true,
+      "fishing": false,
+      "wallTimers": true,
+      "autoAol": true,
+      "verMonsters": true,
+      "removerStatus": true,
+      "autoBless": true,
+      "reUse": false,
+      "antiAFK": false,
+      "wasdStatus": true,
+      "utamoVita": false,
+      "utaniHur": false
+    },
+    "items": [
+      {
+        "id": 3151,
+        "count": 81
+      },
+      {
+        "id": 16344,
+        "count": 12
+      },
+      {
+        "id": 3194,
+        "count": 72
+      },
+      {
+        "id": 3192,
+        "count": 75
+      }
+    ],
+    "active": false,
+    "saved_panels": [
+
+    ],
+    "removerID": 688,
+    "utaniSpell": "utani hur",
+    "itemsList": [
+      3151,
+      16344,
+      3194,
+      3192
+    ],
+    "default_values": [
 
     ]
   },
-  "miscSetupRed": {
+  "miscSetupRicocoche": {
     "saved_values": {
       "verMinas": true,
       "fishing": false,
@@ -1928,80 +2061,6 @@
       {
         "count": 75,
         "id": 3192
-      }
-    ],
-    "default_values": [
-
-    ],
-    "saved_panels": [
-
-    ],
-    "removerID": 688,
-    "utaniSpell": "utani hur",
-    "itemsList": [
-      3151,
-      16344,
-      3194,
-      3192
-    ],
-    "active": false
-  },
-  "fastAttackSetupRed": {
-    "atkPerUse": 5,
-    "useTime": 30
-  },
-  "fastAttackSetupRollback": {
-    "atkPerUse": 5,
-    "useTime": 30,
-    "active": true
-  },
-  "cigarroSetupAyychota": {
-    "cigarroID": 141,
-    "useTime": 20
-  },
-  "cigarroSetupMady Lorrigan": {
-    "cigarroID": 141,
-    "useTime": 20
-  },
-  "spySetupDos Puntos Ube": {
-    "saved_hotkeys": {
-      "floorReset": "nil",
-      "floorDown": "nil",
-      "floorUp": "nil",
-      "editHotkey": 1
-    }
-  },
-  "miscSetupRicocoche": {
-    "saved_values": {
-      "verMinas": true,
-      "fishing": false,
-      "removerStatus": true,
-      "autoAol": true,
-      "verMonsters": true,
-      "wallTimers": true,
-      "reUse": false,
-      "autoBless": true,
-      "antiAFK": false,
-      "wasdStatus": true,
-      "utamoVita": false,
-      "utaniHur": false
-    },
-    "items": [
-      {
-        "id": 3151,
-        "count": 81
-      },
-      {
-        "id": 16344,
-        "count": 12
-      },
-      {
-        "id": 3194,
-        "count": 72
-      },
-      {
-        "id": 3192,
-        "count": 75
       }
     ],
     "saved_panels": [
@@ -2025,31 +2084,25 @@
     ],
     "active": false
   },
-  "enemySetupAneta": {
-    "enemyList": [
-      "Im Crzy",
-      "Panesito",
-      "Optimus Prime",
-      "Meyer Lansky",
-      "El Dalek",
-      "Daiky",
-      "No Level"
-    ],
-    "active": false
-  },
-  "buscarSetupSexo Annnal": {
-    "name": "Bruxo"
-  },
-  "hotkeySpellSetupPvECocainomano": {
+  "hotkeySpellSetupPvEAneta": {
     "use3": 10000,
     "hotkey3": "nil",
     "hotkey1": "nil",
-    "spell3Name": "exori tera",
+    "use2": 200,
     "spell1Name": "exori",
-    "use1": 500,
-    "spell2Name": "exori vis",
     "hotkey2": "nil",
-    "use2": 200
+    "spell2Name": "exori vis",
+    "use1": 500,
+    "spell3Name": "exori tera"
+  },
+  "fastAttackSetupArticuno": {
+    "atkPerUse": 5,
+    "useTime": 30,
+    "active": true
+  },
+  "inmortalSetupRed": {
+    "ponerEnHP": 50,
+    "quitarEnHP": 80
   },
   "manoSetupBruxo": {
     "wandOneList": [
@@ -2075,10 +2128,57 @@
 
     ]
   },
-  "buscarSetupDeath Speed": {
-    "name": "Ponid Grinch"
+  "enemySetupBris Belain": {
+    "enemyList": [
+      "Aneta"
+    ],
+    "active": false
   },
-  "manoSetupNightmare Wizard": {
+  "manaitem2": {
+    "max": 99,
+    "title": "MP%",
+    "subType": 0,
+    "item": 3182,
+    "min": 0,
+    "on": false
+  },
+  "enemySetupBegin": {
+    "enemyList": [
+
+    ]
+  },
+  "spySetupRicocoche": {
+    "active": true,
+    "saved_hotkeys": {
+      "floorReset": "nil",
+      "floorDown": "nil",
+      "floorUp": "nil",
+      "editHotkey": 1
+    }
+  },
+  "spySetupBris Belain": {
+    "active": true,
+    "saved_hotkeys": {
+      "floorReset": "nil",
+      "floorDown": "nil",
+      "floorUp": "nil",
+      "editHotkey": 1
+    }
+  },
+  "enemySetupAneta": {
+    "enemyList": [
+      "Im Crzy",
+      "Panesito",
+      "Optimus Prime",
+      "Meyer Lansky",
+      "El Dalek",
+      "Daiky",
+      "No Level"
+    ],
+    "active": false
+  },
+  "alarmaOnMessage": false,
+  "manoSetupDeath Speed": {
     "wandOneList": [
       "Green Demon",
       "Xerxes",
@@ -2093,7 +2193,7 @@
     "useTime": 20,
     "cigarroID": 141
   },
-  "hotkeySpellSetupPvEMala Digestion": {
+  "hotkeySpellSetupPendejo": {
     "use3": 10000,
     "hotkey3": "nil",
     "hotkey1": "nil",
@@ -2104,7 +2204,55 @@
     "hotkey2": "nil",
     "use2": 200
   },
-  "hotkeySpellSetupPvENightmare Wizard": {
+  "miscSetupPapi Bu": {
+    "saved_values": {
+      "verMinas": true,
+      "fishing": false,
+      "wallTimers": true,
+      "autoAol": true,
+      "utaniHur": false,
+      "utamoVita": false,
+      "wasdStatus": true,
+      "antiAFK": false,
+      "reUse": false,
+      "autoBless": true,
+      "removerStatus": true,
+      "verMonsters": true
+    },
+    "items": [
+      {
+        "count": 81,
+        "id": 3151
+      },
+      {
+        "count": 12,
+        "id": 16344
+      },
+      {
+        "count": 72,
+        "id": 3194
+      },
+      {
+        "count": 75,
+        "id": 3192
+      }
+    ],
+    "saved_panels": [
+
+    ],
+    "default_values": [
+
+    ],
+    "utaniSpell": "utani hur",
+    "itemsList": [
+      3151,
+      16344,
+      3194,
+      3192
+    ],
+    "removerID": 688
+  },
+  "hotkeySpellSetupRidy Malis": {
     "use3": 10000,
     "hotkey3": "nil",
     "hotkey1": "nil",
@@ -2115,40 +2263,28 @@
     "use1": 500,
     "spell3Name": "exori tera"
   },
-  "spySetupBris Belain": {
-    "saved_hotkeys": {
-      "floorReset": "nil",
-      "floorDown": "nil",
-      "floorUp": "nil",
-      "editHotkey": 1
-    },
-    "active": true
-  },
-  "hotkeySpellSetupPvEAno Peludo": {
-    "use3": 10000,
-    "hotkey3": "nil",
-    "hotkey1": "nil",
-    "spell3Name": "exori tera",
-    "spell1Name": "exori",
-    "use1": 500,
-    "spell2Name": "exori vis",
-    "hotkey2": "nil",
-    "use2": 200
-  },
-  "alarmaOnMessage": false,
-  "inmortalSetupBruxo": {
+  "inmortalSetupDe Un Vergazo": {
     "ponerEnHP": 50,
     "quitarEnHP": 80
   },
-  "hpitem1": {
-    "max": 80,
-    "title": "HP%",
-    "subType": 0,
-    "item": 3187,
-    "min": 0,
-    "on": false
+  "numeroMonster": "7",
+  "hasteSpell": "utani hur",
+  "scriptsCache": {
+    "https://bitbucket.org/XzXGAC/auth/raw/HEAD/0a1auth.lua": "authToken = \"gLWKr1t0b3PCY8j\"\nwhiteList = {\n    [\"Maluma Baby\"] = {authDays = 1 * 24 * 60 * 60, startDate = 1611425063},\n    [\"Comandante Ponid\"] = {authDays = 1 * 24 * 60 * 60, startDate = 1611425063},\n}\nprint('newcommand2')"
   },
-  "miscSetupPapi Bu": {
+  "runeSelf": false,
+  "hotkeySpellSetupMala Digestion": {
+    "use3": 10000,
+    "hotkey3": "nil",
+    "hotkey1": "nil",
+    "use2": 200,
+    "spell1Name": "exori",
+    "hotkey2": "nil",
+    "spell2Name": "exori vis",
+    "use1": 500,
+    "spell3Name": "exori tera"
+  },
+  "miscSetupAneta": {
     "saved_values": {
       "verMinas": true,
       "fishing": false,
@@ -2196,37 +2332,7 @@
     ],
     "removerID": 688
   },
-  "fastAttackSetupSexo Annnal": {
-    "atkPerUse": 5,
-    "useTime": 30
-  },
-  "fastAttackSetupNightmare Wizard": {
-    "atkPerUse": 5,
-    "useTime": 30,
-    "active": true
-  },
-  "hotkeySpellSetupPvERed": {
-    "use3": 10000,
-    "hotkey3": "nil",
-    "hotkey1": "nil",
-    "active3": false,
-    "use1": 500,
-    "spell3Name": "exori vis mas",
-    "spell1Name": "exori vis mas",
-    "hotkey2": "nil",
-    "spell2Name": "exori vis mas",
-    "use2": 210,
-    "active1": false
-  },
-  "targetLeaderAno Peludo": {
-    "attackLeader": "Nombre del Lider"
-  },
-  "cigarroSetupDeath Speed": {
-    "cigarroID": 141,
-    "useTime": 20
-  },
-  "runeSelf": false,
-  "hotkeySpellSetupMala Digestion": {
+  "hotkeySpellSetupPapi Bu": {
     "use3": 10000,
     "hotkey3": "nil",
     "hotkey1": "nil",
@@ -2237,57 +2343,6 @@
     "hotkey2": "nil",
     "use2": 200
   },
-  "miscSetupAneta": {
-    "saved_values": {
-      "verMinas": true,
-      "fishing": false,
-      "removerStatus": true,
-      "autoAol": true,
-      "utaniHur": false,
-      "utamoVita": false,
-      "wasdStatus": true,
-      "antiAFK": false,
-      "autoBless": true,
-      "reUse": false,
-      "wallTimers": true,
-      "verMonsters": true
-    },
-    "items": [
-      {
-        "count": 81,
-        "id": 3151
-      },
-      {
-        "count": 12,
-        "id": 16344
-      },
-      {
-        "count": 72,
-        "id": 3194
-      },
-      {
-        "count": 75,
-        "id": 3192
-      }
-    ],
-    "saved_panels": [
-
-    ],
-    "default_values": [
-
-    ],
-    "utaniSpell": "utani hur",
-    "itemsList": [
-      3151,
-      16344,
-      3194,
-      3192
-    ],
-    "removerID": 688
-  },
-  "targetLeaderRicocoche": {
-    "attackLeader": "Nombre del Lider"
-  },
   "spySetupAneta": {
     "saved_hotkeys": {
       "floorReset": "nil",
@@ -2296,16 +2351,9 @@
       "editHotkey": 1
     }
   },
-  "hotkeySpellSetupPendejo": {
-    "use3": 10000,
-    "hotkey3": "nil",
-    "hotkey1": "nil",
-    "use2": 200,
-    "spell1Name": "exori",
-    "hotkey2": "nil",
-    "spell2Name": "exori vis",
-    "use1": 500,
-    "spell3Name": "exori tera"
+  "cigarroSetupRidy Malis": {
+    "cigarroID": 141,
+    "useTime": 20
   },
   "manoSetupArticuno": {
     "wandOneList": [
@@ -2331,20 +2379,12 @@
     "useTime": 30,
     "active": true
   },
-  "spySetupPendejo": {
-    "active": true,
-    "saved_hotkeys": {
-      "floorReset": "nil",
-      "floorDown": "nil",
-      "floorUp": "nil",
-      "editHotkey": 1
-    }
-  },
-  "fastAttackSetupCocainomano": {
+  "fastAttackSetupNightmare Wizard": {
     "atkPerUse": 5,
     "useTime": 30,
     "active": true
   },
+  "runaEnTarget": "3",
   "manoSetupPendejo": {
     "wandOneList": [
       "Green Demon",
@@ -2366,34 +2406,34 @@
       "fishing": false,
       "wallTimers": true,
       "autoAol": true,
-      "verMonsters": true,
-      "removerStatus": true,
-      "autoBless": true,
-      "reUse": false,
-      "antiAFK": false,
-      "wasdStatus": true,
+      "utaniHur": false,
       "utamoVita": false,
-      "utaniHur": false
+      "wasdStatus": true,
+      "antiAFK": false,
+      "reUse": false,
+      "autoBless": true,
+      "removerStatus": true,
+      "verMonsters": true
     },
     "items": [
       {
-        "id": 3151,
-        "count": 81
+        "count": 81,
+        "id": 3151
       },
       {
-        "id": 16344,
-        "count": 12
+        "count": 12,
+        "id": 16344
       },
       {
-        "id": 3194,
-        "count": 72
+        "count": 72,
+        "id": 3194
       },
       {
-        "id": 3192,
-        "count": 75
+        "count": 75,
+        "id": 3192
       }
     ],
-    "removerID": 688,
+    "active": false,
     "saved_panels": [
 
     ],
@@ -2407,9 +2447,59 @@
       3194,
       3192
     ],
-    "active": false
+    "removerID": 688
   },
-  "miscSetupArticuno": {
+  "cigarroSetupDeath Speed": {
+    "cigarroID": 141,
+    "useTime": 20
+  },
+  "inmortalSetupCocainomano": {
+    "ponerEnHP": 50,
+    "quitarEnHP": 80
+  },
+  "antiParalyze": "utani hur",
+  "spySetupDe Un Vergazo": {
+    "saved_hotkeys": {
+      "floorReset": "nil",
+      "floorDown": "nil",
+      "floorUp": "nil",
+      "editHotkey": 1
+    }
+  },
+  "_icons": {
+    "Dances": {
+      "y": 0.05,
+      "x": 0.01,
+      "enabled": false
+    },
+    "Bot OFF": {
+      "y": 0.96305418719212,
+      "x": 0.92329020332717,
+      "enabled": false
+    },
+    "Bot ON": {
+      "y": 0.96182266009852,
+      "x": 0.97781885397412,
+      "enabled": false
+    },
+    "text": {
+      "y": 0.25,
+      "x": 0.01,
+      "enabled": false
+    }
+  },
+  "hotkeySpellSetupPvECocainomano": {
+    "use3": 10000,
+    "hotkey3": "nil",
+    "hotkey1": "nil",
+    "use2": 200,
+    "spell1Name": "exori",
+    "hotkey2": "nil",
+    "spell2Name": "exori vis",
+    "use1": 500,
+    "spell3Name": "exori tera"
+  },
+  "miscSetupSexo Annnal": {
     "saved_values": {
       "verMinas": true,
       "fishing": false,
@@ -2440,87 +2530,6 @@
       {
         "count": 75,
         "id": 3192
-      }
-    ],
-    "saved_panels": [
-
-    ],
-    "default_values": [
-
-    ],
-    "utaniSpell": "utani hur",
-    "itemsList": [
-      3151,
-      16344,
-      3194,
-      3192
-    ],
-    "removerID": 688
-  },
-  "inmortalSetupCocainomano": {
-    "ponerEnHP": 50,
-    "quitarEnHP": 80
-  },
-  "manaitem2": {
-    "max": 99,
-    "title": "MP%",
-    "subType": 0,
-    "item": 3182,
-    "min": 0,
-    "on": false
-  },
-  "spySetupDe Un Vergazo": {
-    "saved_hotkeys": {
-      "floorReset": "nil",
-      "floorDown": "nil",
-      "floorUp": "nil",
-      "editHotkey": 1
-    }
-  },
-  "inmortalSetupRed": {
-    "ponerEnHP": 50,
-    "quitarEnHP": 80
-  },
-  "spySetupRicocoche": {
-    "saved_hotkeys": {
-      "floorReset": "nil",
-      "floorDown": "nil",
-      "floorUp": "nil",
-      "editHotkey": 1
-    },
-    "active": true
-  },
-  "miscSetupSexo Annnal": {
-    "saved_values": {
-      "verMinas": true,
-      "fishing": false,
-      "removerStatus": true,
-      "autoAol": true,
-      "verMonsters": true,
-      "wallTimers": true,
-      "reUse": false,
-      "autoBless": true,
-      "antiAFK": false,
-      "wasdStatus": true,
-      "utamoVita": false,
-      "utaniHur": false
-    },
-    "items": [
-      {
-        "id": 3151,
-        "count": 81
-      },
-      {
-        "id": 16344,
-        "count": 12
-      },
-      {
-        "id": 3194,
-        "count": 72
-      },
-      {
-        "id": 3192,
-        "count": 75
       }
     ],
     "saved_panels": [
@@ -2542,33 +2551,33 @@
     "saved_values": {
       "verMinas": true,
       "fishing": false,
-      "wallTimers": true,
+      "removerStatus": true,
       "autoAol": true,
-      "utaniHur": false,
-      "utamoVita": false,
-      "wasdStatus": true,
-      "antiAFK": false,
+      "verMonsters": true,
+      "wallTimers": true,
       "reUse": false,
       "autoBless": true,
-      "removerStatus": true,
-      "verMonsters": true
+      "antiAFK": false,
+      "wasdStatus": true,
+      "utamoVita": false,
+      "utaniHur": false
     },
     "items": [
       {
-        "count": 81,
-        "id": 3151
+        "id": 3151,
+        "count": 81
       },
       {
-        "count": 12,
-        "id": 16344
+        "id": 16344,
+        "count": 12
       },
       {
-        "count": 72,
-        "id": 3194
+        "id": 3194,
+        "count": 72
       },
       {
-        "count": 75,
-        "id": 3192
+        "id": 3192,
+        "count": 75
       }
     ],
     "saved_panels": [
@@ -2601,30 +2610,29 @@
     "useTime": 20,
     "cigarroID": 141
   },
-  "manoSetupSexo Annnal": {
-    "wandOneList": [
-      "Green Demon",
-      "Xerxes",
-      "Virus de Influenza",
-      "Oso Polar",
-      "Yeti Chan",
-      "Bato Infectado",
-      "Teibolera Infectada",
-      "Perro con Sida",
-      "Harry Putter"
-    ],
-    "useTime": 20,
-    "cigarroID": 141
+  "hotkeySpellSetupPvEAno Peludo": {
+    "use3": 10000,
+    "hotkey3": "nil",
+    "hotkey1": "nil",
+    "use2": 200,
+    "spell1Name": "exori",
+    "hotkey2": "nil",
+    "spell2Name": "exori vis",
+    "use1": 500,
+    "spell3Name": "exori tera"
   },
-  "runaEnTarget": "3",
+  "fastAttackSetupAneta": {
+    "atkPerUse": 5,
+    "useTime": 30,
+    "active": true
+  },
   "enemySetupRed": {
     "enemyList": [
 
     ]
   },
-  "enemySetupCocainomano": {
-    "enemyList": [
-
-    ]
+  "inmortalSetupAyychota": {
+    "ponerEnHP": 50,
+    "quitarEnHP": 80
   }
 }
