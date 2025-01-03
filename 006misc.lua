@@ -32,7 +32,7 @@ if not storage[panelName .. name] then
       saved_panels = {}
     }
 end
-
+--removerID = 688,
 -- Panels
 local hurPanel = UI.createWidget("HurWindow")
 hurPanel:hide()
@@ -64,6 +64,7 @@ Misc.setup = function()
   add("utamoVita", "Auto Utamo", false, "switch")
   add("utaniHur", "Auto Hur", false, "switchEdit", hurPanel)
   add("fishing", "Auto Fishing", false, "switch")
+  add("runeNextTo", "Auto Nextto", false, "switch") 
 
 end
 
@@ -211,3 +212,125 @@ removerPanel.removerValue.onTextChange = function(widget, text)
 end
 
 UI.Separator()
+
+
+local panelName = "autoSpellConfig"
+local name = "" .. g_game.getCharacterName() .. ""
+AutoSpell = {}
+
+-- Default Storage Initialization
+if not storage[panelName .. name] then
+    storage[panelName .. name] = {
+        numeroMonsters = 3,
+        palabra = "exura ico",
+        rango = 5,
+        active = false
+    }
+end
+
+-- Main UI Button
+local autoSpellUI = setupUI([[  
+Panel
+  height: 20
+
+  BotSwitch
+    id: spellSwitch
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.right: parent.right
+    text-align: center
+    width: 130
+    $on:
+      text: Ocultar Spell Config
+      color: #00FF00
+    $!on:
+      text: Mostrar Spell Config
+]])
+
+autoSpellUI.spellSwitch:setOn(storage[panelName .. name].active)
+
+-- AutoSpell Configuration Panel
+local spellConfigPanel = setupUI([[  
+Panel
+  id: autoSpellPanel
+  anchors.top: parent.top
+  anchors.left: parent.left
+  margin-top: 25
+  width: 200
+
+  Label
+    text: Configuración de AutoSpell
+    font: verdana-11b
+    anchors.left: parent.left
+    anchors.top: parent.top
+
+  Label
+    text: Cantidad de Monstruos:
+    anchors.top: prev.bottom
+    anchors.left: parent.left
+
+  SpinBox
+    id: numeroMonsters
+    anchors.top: prev.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    min: 1
+    max: 100
+
+  Label
+    text: Spell:
+    anchors.top: prev.bottom
+    anchors.left: parent.left
+
+  TextEdit
+    id: palabra
+    anchors.top: prev.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+
+  Label
+    text: Rango del Spell:
+    anchors.top: prev.bottom
+    anchors.left: parent.left
+
+  SpinBox
+    id: rango
+    anchors.top: prev.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    min: 1
+    max: 20
+]])
+
+spellConfigPanel:hide()
+
+-- Load Saved Values
+spellConfigPanel.numeroMonsters:setValue(storage[panelName .. name].numeroMonsters)
+spellConfigPanel.palabra:setText(storage[panelName .. name].palabra)
+spellConfigPanel.rango:setValue(storage[panelName .. name].rango)
+
+-- Save Input Values
+spellConfigPanel.numeroMonsters.onValueChange = function(widget, value)
+    storage[panelName .. name].numeroMonsters = value
+end
+
+spellConfigPanel.palabra.onTextChange = function(widget, text)
+    storage[panelName .. name].palabra = text
+end
+
+spellConfigPanel.rango.onValueChange = function(widget, value)
+    storage[panelName .. name].rango = value
+end
+
+-- Show/Hide Panel Logic
+autoSpellUI.spellSwitch.onClick = function()
+    if storage[panelName .. name].active then
+        spellConfigPanel:hide()
+        autoSpellUI.spellSwitch:setOn(false)
+        storage[panelName .. name].active = false
+    else
+        spellConfigPanel:show()
+        autoSpellUI.spellSwitch:setOn(true)
+        storage[panelName .. name].active = true
+    end
+end

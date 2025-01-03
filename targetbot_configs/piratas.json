@@ -2,28 +2,16 @@
   "looting": {
     "items": [
       {
-        "count": 0,
-        "id": 10329
-      },
-      {
-        "count": 0,
-        "id": 5922
-      },
-      {
-        "count": 0,
-        "id": 1781
-      },
-      {
-        "count": 0,
-        "id": 5896
-      },
-      {
         "count": 1,
-        "id": 9041
+        "id": 6097
       },
       {
-        "count": 1,
-        "id": 3040
+        "count": 0,
+        "id": 6126
+      },
+      {
+        "count": 0,
+        "id": 6098
       }
     ],
     "maxDanger": 10,
@@ -31,11 +19,7 @@
     "containers": [
       {
         "count": 1,
-        "id": 10327
-      },
-      {
-        "count": 1,
-        "id": 2865
+        "id": 8860
       }
     ],
     "everyItem": false
@@ -43,54 +27,54 @@
   "targeting": [
     {
       "useSpellAttack": false,
-      "useRuneAttack": true,
+      "useRuneAttack": false,
       "minMana": 200,
       "avoidAttacks": false,
       "attackSpellDelay": 2500,
       "groupRuneAttackDelay": 5000,
-      "danger": 1,
+      "danger": 2,
       "runeAttackDelay": 2000,
       "lureCavebot": false,
       "dontLoot": false,
       "useGroupAttackRune": false,
       "groupRuneAttackRadius": 1,
       "groupAttackIgnorePlayers": false,
-      "maxDistance": 10,
+      "maxDistance": 3,
       "groupAttackIgnoreParty": false,
-      "lureCount": 2,
+      "lureCount": 1,
       "useGroupAttack": false,
       "groupRuneAttackTargets": 2,
-      "attackSpell": "exevo vis mas",
+      "attackSpell": "",
       "chase": false,
-      "priority": 1,
+      "priority": 2,
       "keepDistanceRange": 1,
       "groupAttackTargets": 2,
-      "minManaGroup": 1600,
+      "minManaGroup": 1500,
       "groupAttackRune": 0,
       "groupAttackRadius": 1,
       "groupAttackDelay": 5000,
       "lure": false,
-      "attackRune": 3194,
+      "attackRune": 0,
       "keepDistance": false,
       "groupAttackSpell": "",
-      "name": "Yeti Chan",
-      "regex": "^yeti chan$"
+      "name": "El Big Show",
+      "regex": "^el big show$"
     },
     {
       "useSpellAttack": false,
       "useRuneAttack": false,
       "minMana": 200,
       "avoidAttacks": false,
-      "groupAttackTargets": 2,
+      "minManaGroup": 1500,
       "groupAttackSpell": "",
-      "danger": 1,
+      "danger": 3,
       "runeAttackDelay": 2000,
       "lureCavebot": false,
       "dontLoot": false,
       "useGroupAttackRune": false,
       "groupRuneAttackRadius": 1,
       "groupAttackIgnorePlayers": false,
-      "maxDistance": 4,
+      "maxDistance": 3,
       "groupAttackIgnoreParty": false,
       "lureCount": 1,
       "useGroupAttack": false,
@@ -99,17 +83,17 @@
       "groupAttackRune": 0,
       "groupAttackRadius": 1,
       "keepDistanceRange": 1,
-      "groupRuneAttackDelay": 5000,
-      "priority": 1,
-      "attackRune": 0,
       "groupAttackDelay": 5000,
-      "minManaGroup": 1500,
-      "lure": false,
+      "attackRune": 0,
+      "chase": true,
+      "priority": 3,
       "keepDistance": false,
+      "lure": false,
+      "groupAttackTargets": 2,
+      "groupRuneAttackDelay": 5000,
       "attackSpellDelay": 2500,
-      "chase": false,
-      "name": "Gozzler",
-      "regex": "^gozzler$"
+      "name": "Pirata Chupitos",
+      "regex": "^pirata chupitos$"
     }
   ]
 }

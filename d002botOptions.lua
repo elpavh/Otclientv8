@@ -2,6 +2,7 @@ setDefaultTab("Cave")
 UI.Separator()
 
 local panelName = "botOptions"
+
 local botOptions = {}
 botOptions.values = {}
 
@@ -171,18 +172,13 @@ spellSpam.removerValue.onTextChange = function(widget, text)
 end
 
 
-macro(505, function()
+macro(200, function()
+  local skull = g_game.getLocalPlayer():getSkull()
+  local SKULL_WHITE = 0
   if not botOptions.get("spamRune") then return end
-    local players = 0
-    for _, n in ipairs(getSpectators(false)) do
-        if n:isPlayer() and n:getName() ~= name() then
-            players = players + 0
-        end
-    end
-    if players > 0 then
-        return
-    end
-    usewith( storage[panelName].useRune, player) 
+  --if skull == SKULL_WHITE or skull == 1 or skull == 2 then
+   usewith( storage[panelName].useRune, player) 
+  --end
 end)
 
 
@@ -213,18 +209,14 @@ macro(100, function()
   end
 end)
 
+
 macro(2000, function()
+local skull = g_game.getLocalPlayer():getSkull()
+local SKULL_WHITE = 0
  if not botOptions.get("spamSpell") then return end
- local players = 0
- for _, n in ipairs(getSpectators(false)) do
-     if n:isPlayer() and n:getName() ~= name() then
-         players = players + 0
-     end
+ if skull == SKULL_WHITE or skull == 1 or skull == 2 then
+  say(storage[panelName].spellName)
  end
- if players > 0 then
-     return
- end
- say(storage[panelName].spellName)
 end)
 
 

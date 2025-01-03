@@ -18,11 +18,9 @@
   UI.Separator()
   UI.Label("Follow Player:")
 addTextEdit("playerToFollow", storage.followLeader or "Rollback", function(widget, text)
-	storage.followLeader = text
-	target = tostring(text)
+    storage.followLeader = text
+    target = tostring(text) -- Actualizar el target dinámicamente.
 end)
-
-
 
 
 
@@ -171,26 +169,29 @@ end
 
 
 macro(500, "Advanced Follow", "", function(macro)
+	if not macro:isOn() then
+        g_keyboard.pressKey("Escape")
+        return
+    end
+	if not target or target == "" then
+        return warn("Target is empty or invalid.")
+    end
 	local c = getCreatureByName(target)
 
-	if g_game.isFollowing() then
-		if g_game.getFollowingCreature() ~= c then
-			g_game.cancelFollow()
-			g_game.follow(c)
-		end
-	end
+    local c = getCreatureByName(target)
 
-	if c and not g_game.isFollowing() then
-		g_game.follow(c)
-	elseif c and g_game.isFollowing() and getDistanceBetween(pos(), c:getPosition()) > 1 then
-		g_game.cancelFollow()
-		g_game.follow(c)
-	end
-
-	checkTargetPos()
-	if targetMissing() and lastKnownPosition then
-		handleFloorChange()
-	end
+    if c then
+        if getDistanceBetween(pos(), c:getPosition()) > 1 then
+            if not g_game.isFollowing() or g_game.getFollowingCreature() ~= c then
+                g_game.follow(c)
+            end
+        end
+        checkTargetPos()
+    elseif lastKnownPosition then
+        handleFloorChange()
+    else
+        print("Target not found and no last known position.")
+    end
 end)
 UI.Separator()
 

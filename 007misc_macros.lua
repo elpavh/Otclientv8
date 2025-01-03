@@ -85,16 +85,29 @@ macro(100, function(macro)
 end)
 
 -- Remover Walls --
-local wallIds = {2129, 7928, 7931}
+local wallIds = {2129, 7928, 7931,24126,7931,7928}
 local numpadKeys = {"Numpad9", "Numpad1", "Numpad2", "Numpad3", "Numpad4", "Numpad6", "Numpad7", "Numpad8"}
 local wasdKeys = {"W", "A", "S", "D", "Q", "E", "Z", "C"}
-local function autoRemoveWalls(tile)
+local removerID2 = {"17744"}
+
+local function getNextRemoverID(currentID)
+  local idIndex = table.find(removerID2, currentID)
+  if not idIndex then
+    return removerID2[1]
+  elseif idIndex == #wallIds then
+    return removerID2[1]
+  else
+    return removerID2[idIndex+1]
+  end
+end
+
+local function autoRemoveWalls(tile, removerID2)
   if not tile then return end
   if tile then
 	  local things = tile:getThings()
 	  for _, item in pairs(things) do
       if table.find(wallIds, item:getId()) then
-			  usewith(tonumber(storage[panelName .. name].removerID), tile:getTopUseThing())
+			  usewith(tonumber(removerID2), tile:getTopUseThing())
 		  end
 	  end
   end
@@ -116,7 +129,8 @@ onKeyPress(function(keys)
         ["C"] = g_map.getTile({x = posx() + 1, y = posy() + 1, z = posz()})
       }
       local thisWall = directions[keys]
-      autoRemoveWalls(thisWall)
+      autoRemoveWalls(thisWall, currentRemoverID)
+      currentRemoverID = getNextRemoverID(currentRemoverID)
     end
   elseif not Misc.get("wasdStatus") then
     if table.find(numpadKeys, keys) then
@@ -131,7 +145,8 @@ onKeyPress(function(keys)
           ["Numpad3"] = g_map.getTile({x = posx() + 1, y = posy() + 1, z = posz()})
       }
       local thisWall = directions[keys]
-      autoRemoveWalls(thisWall)
+      autoRemoveWalls(thisWall, currentRemoverID)
+      currentRemoverID = getNextRemoverID(currentRemoverID)
     end
   end
 end)
@@ -294,3 +309,37 @@ end)
 
 
 buyAol()
+
+
+--   Auto Nextto; Sirve para tirar runa aun lado del target . --
+local key = "SHIFT+L" 
+local Medusaid = 3151
+local squaresThreshold = 1 
+
+-- script
+macro(600, function()
+  if not Misc.get("runeNextTo") then return end
+  local target = g_game.getAttackingCreature()
+  if target then
+    local targetPos = target:getPosition()
+    local targetDir = target:getDirection()
+    local mwallTile
+    if targetDir == 0 then -- north
+      targetPos.y = targetPos.y - squaresThreshold
+      mwallTile = g_map.getTile(targetPos)
+      useWith(Medusaid, mwallTile:getTopUseThing())
+    elseif targetDir == 1 then -- east
+      targetPos.x = targetPos.x + squaresThreshold
+      mwallTile = g_map.getTile(targetPos)
+      useWith(Medusaid, mwallTile:getTopUseThing())
+    elseif targetDir == 2 then -- south
+      targetPos.y = targetPos.y + squaresThreshold
+      mwallTile = g_map.getTile(targetPos)
+      useWith(Medusaid, mwallTile:getTopUseThing())
+    elseif targetDir == 3 then -- west
+      targetPos.x = targetPos.x - squaresThreshold
+      mwallTile = g_map.getTile(targetPos)
+      useWith(Medusaid, mwallTile:getTopUseThing())
+    end
+  end
+end)

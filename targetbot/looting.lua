@@ -16,6 +16,11 @@ TargetBot.Looting.setup = function()
     ui.everyItem:setOn(not ui.everyItem:isOn())
     TargetBot.save()
   end
+  for _, tile in ipairs(g_map.getTiles(posz())) do
+    for _, item in ipairs(tile:getItems()) do
+        print("Encontrado ítem ID:", item:getId(), "en posición:", item:getPosition())
+    end
+end
   ui.maxDangerPanel.value.onTextChange = function()
     local value = tonumber(ui.maxDangerPanel.value:getText())
     if not value then

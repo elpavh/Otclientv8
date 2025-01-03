@@ -16,48 +16,41 @@ UI.Separator()
 local nombres =
 {
   "Goblin Ninja",
-  "PescadoT Rojo",
+  "Alma Contaminada",
   "Training Monk",
-  "Pedo de Bala"
+  "La Mole",
+  "Gozzler",
+  "Goblin Vip"
 }
 
 macro(2000, "Auto Spell", function()
     local cantidad = 0
-  for _, spec in ipairs(getSpectators(false)) do
-    for _, creature in pairs(nombres) do
-      if spec:getName():lower():find(creature:lower()) then
-	  cantidad = cantidad + 1
-      end
+    local rango = tonumber(storage.rango) or 7 -- Rango por defecto de 7 si no está configurado
+    for _, spec in ipairs(getSpectators(false)) do
+        if spec.getDistance and spec:getDistance() <= rango then -- Verificar si 'getDistance' existe y si está dentro del rango
+            for _, creature in pairs(nombres) do
+                if spec:getName():lower():find(creature:lower()) then
+                    cantidad = cantidad + 1
+                end
+            end
+        end
     end
-  end
-  if cantidad >= tonumber(storage.numeroMonster) then
+    if cantidad >= tonumber(storage.numeroMonster) then
         say(storage.palabra)
+        delay(10000)
     end
 end)
+
 addTextEdit("numeroMonster", storage.numeroMonster or "1", function(widget, text)
     storage.numeroMonster = text
 end)
-addTextEdit("palabra", storage.palabra , function(widget, text) 
-storage.palabra = text
+
+addTextEdit("palabra", storage.palabra, function(widget, text) 
+    storage.palabra = text
 end)
 
-UI.Separator()
-
-UI.Label("ManaRune Healing")
-if type(storage.manaHeal) ~= "table" then
-  storage.manaHeal = {on = false, title = "%MP", item = 3182, min = 90}
-end
-
-local manaHealMacro = macro(200, function()
-  if (manapercent() <= storage.manaHeal.min) then
-    usewith(storage.manaHeal.item, player) 
-end
-end)
-manaHealMacro.setOn(storage.manaHeal.on)
-
-UI.SingleScrollItemPanel(storage.manaHeal, function(widget, newParams) 
-  storage.manaHeal = newParams
-  manaHealMacro.setOn(storage.manaHeal.on)
+addTextEdit("rango", storage.rango or "7", function(widget, text)
+    storage.rango = text
 end)
 
 UI.Separator()
@@ -185,5 +178,16 @@ tclastExivaMacro = macro(100, "Enable", "SHIFT+F1", function()
   delay(tonumber(storage[panelName].timer) * 1000)
 end, tclastExivaUI)
 UI.Separator(tclastExivaUI)
+
+UI.Separator()
+macro(200, "RangeAttack Spell", function()
+  local target = g_game.getAttackingCreature()
+  if target and getDistanceBetween(pos(), target:getPosition()) <= 8 then
+      say(storage.autoAttackSpell)
+  end
+end)
+addTextEdit("autoAttackSpell", storage.autoAttackSpell or "exevo vis mas", function(widget, text)
+  storage.autoAttackSpell = text
+end)
 
 UI.Separator()
